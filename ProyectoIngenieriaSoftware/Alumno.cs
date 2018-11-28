@@ -114,9 +114,6 @@ namespace ProyectoIngenieriaSoftware
                     Metodos.ActualizarAlumno(txtUpdateId.Text, txtUpdateNombre.Text, txtUpdateDireccion.Text, txtUpdateEdad.Text, txtUpdateCorreo.Text);
                     MessageBox.Show("El registro con id "+txtUpdateId.Text+" fue actualizado correctamente");
 
-                    
-
-
                     break;
                 case DialogResult.No:
                     break;

@@ -22,3 +22,5 @@ E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csproj.Genera
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csproj.CoreCompileInputs.cache
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.exe
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.pdb
+E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Profesor.resources
+E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Curso.resources

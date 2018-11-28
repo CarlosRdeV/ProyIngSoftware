@@ -1,6 +1,6 @@
 ﻿namespace ProyectoIngenieriaSoftware
 {
-    partial class Alumno
+    partial class Calificacion
     {
         /// <summary>
         /// Required designer variable.
@@ -30,20 +30,18 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.cmbCorreo = new System.Windows.Forms.ComboBox();
-            this.txtCorreo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmbHorario = new System.Windows.Forms.ComboBox();
+            this.cmbDuracion = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.lbCorreo = new System.Windows.Forms.Label();
-            this.lbEdad = new System.Windows.Forms.Label();
-            this.lbDireccion = new System.Windows.Forms.Label();
+            this.lblProfesor = new System.Windows.Forms.Label();
+            this.lblHorario = new System.Windows.Forms.Label();
+            this.lblDuracion = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -53,9 +51,9 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txtUpdateCorreo = new System.Windows.Forms.TextBox();
-            this.txtUpdateEdad = new System.Windows.Forms.TextBox();
-            this.txtUpdateDireccion = new System.Windows.Forms.TextBox();
+            this.txtUpdateProfesor = new System.Windows.Forms.TextBox();
+            this.txtUpdateHorario = new System.Windows.Forms.TextBox();
+            this.txtUpdateDuracion = new System.Windows.Forms.TextBox();
             this.txtUpdateNombre = new System.Windows.Forms.TextBox();
             this.btnModificarUpdate = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
@@ -82,94 +80,89 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(26, 37);
+            this.tabControl1.Location = new System.Drawing.Point(25, 30);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(460, 300);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.cmbCorreo);
-            this.tabPage1.Controls.Add(this.txtCorreo);
-            this.tabPage1.Controls.Add(this.label4);
-            this.tabPage1.Controls.Add(this.txtEdad);
-            this.tabPage1.Controls.Add(this.label3);
-            this.tabPage1.Controls.Add(this.txtDireccion);
             this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.cmbHorario);
+            this.tabPage1.Controls.Add(this.cmbDuracion);
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.txtNombre);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.button1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(452, 272);
+            this.tabPage1.Size = new System.Drawing.Size(452, 274);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Crear";
             this.tabPage1.UseVisualStyleBackColor = true;
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // cmbCorreo
-            // 
-            this.cmbCorreo.FormattingEnabled = true;
-            this.cmbCorreo.Items.AddRange(new object[] {
-            "@gmail.com",
-            "@hotmail.com",
-            "@outlook.com",
-            "@yahoo.com.mx",
-            "@live.com"});
-            this.cmbCorreo.Location = new System.Drawing.Point(290, 150);
-            this.cmbCorreo.Name = "cmbCorreo";
-            this.cmbCorreo.Size = new System.Drawing.Size(121, 21);
-            this.cmbCorreo.TabIndex = 12;
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Location = new System.Drawing.Point(134, 150);
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(149, 20);
-            this.txtCorreo.TabIndex = 9;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 150);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Correo Electronico";
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.Location = new System.Drawing.Point(134, 124);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(149, 20);
-            this.txtEdad.TabIndex = 7;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(34, 124);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Edad";
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Location = new System.Drawing.Point(134, 98);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(149, 20);
-            this.txtDireccion.TabIndex = 5;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 98);
+            this.label2.Location = new System.Drawing.Point(272, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Direccion";
+            this.label2.Size = new System.Drawing.Size(69, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Redondeado";
+            // 
+            // cmbHorario
+            // 
+            this.cmbHorario.FormattingEnabled = true;
+            this.cmbHorario.Items.AddRange(new object[] {
+            "10",
+            "9",
+            "8",
+            "7",
+            "6",
+            "5",
+            "4",
+            "3",
+            "2",
+            "1",
+            "0"});
+            this.cmbHorario.Location = new System.Drawing.Point(134, 132);
+            this.cmbHorario.Name = "cmbHorario";
+            this.cmbHorario.Size = new System.Drawing.Size(121, 21);
+            this.cmbHorario.TabIndex = 15;
+            // 
+            // cmbDuracion
+            // 
+            this.cmbDuracion.FormattingEnabled = true;
+            this.cmbDuracion.Items.AddRange(new object[] {
+            "9",
+            "10",
+            "11",
+            "12"});
+            this.cmbDuracion.Location = new System.Drawing.Point(134, 101);
+            this.cmbDuracion.Name = "cmbDuracion";
+            this.cmbDuracion.Size = new System.Drawing.Size(121, 21);
+            this.cmbDuracion.TabIndex = 14;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 135);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 13);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Calificacion";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(34, 104);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "ID Curso";
             // 
             // txtNombre
             // 
@@ -181,27 +174,26 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 72);
+            this.label1.Location = new System.Drawing.Point(34, 75);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
+            this.label1.Size = new System.Drawing.Size(56, 13);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre";
+            this.label1.Text = "ID Alumno";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(184, 191);
+            this.button1.Location = new System.Drawing.Point(134, 174);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
             this.button1.Text = "Crear";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.lbCorreo);
-            this.tabPage2.Controls.Add(this.lbEdad);
-            this.tabPage2.Controls.Add(this.lbDireccion);
+            this.tabPage2.Controls.Add(this.lblProfesor);
+            this.tabPage2.Controls.Add(this.lblHorario);
+            this.tabPage2.Controls.Add(this.lblDuracion);
             this.tabPage2.Controls.Add(this.lblNombre);
             this.tabPage2.Controls.Add(this.label9);
             this.tabPage2.Controls.Add(this.label5);
@@ -213,37 +205,37 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(452, 272);
+            this.tabPage2.Size = new System.Drawing.Size(452, 274);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mostrar";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lbCorreo
+            // lblProfesor
             // 
-            this.lbCorreo.AutoSize = true;
-            this.lbCorreo.Location = new System.Drawing.Point(228, 168);
-            this.lbCorreo.Name = "lbCorreo";
-            this.lbCorreo.Size = new System.Drawing.Size(34, 13);
-            this.lbCorreo.TabIndex = 24;
-            this.lbCorreo.Text = "---------";
+            this.lblProfesor.AutoSize = true;
+            this.lblProfesor.Location = new System.Drawing.Point(228, 168);
+            this.lblProfesor.Name = "lblProfesor";
+            this.lblProfesor.Size = new System.Drawing.Size(34, 13);
+            this.lblProfesor.TabIndex = 24;
+            this.lblProfesor.Text = "---------";
             // 
-            // lbEdad
+            // lblHorario
             // 
-            this.lbEdad.AutoSize = true;
-            this.lbEdad.Location = new System.Drawing.Point(228, 142);
-            this.lbEdad.Name = "lbEdad";
-            this.lbEdad.Size = new System.Drawing.Size(34, 13);
-            this.lbEdad.TabIndex = 23;
-            this.lbEdad.Text = "---------";
+            this.lblHorario.AutoSize = true;
+            this.lblHorario.Location = new System.Drawing.Point(228, 142);
+            this.lblHorario.Name = "lblHorario";
+            this.lblHorario.Size = new System.Drawing.Size(34, 13);
+            this.lblHorario.TabIndex = 23;
+            this.lblHorario.Text = "---------";
             // 
-            // lbDireccion
+            // lblDuracion
             // 
-            this.lbDireccion.AutoSize = true;
-            this.lbDireccion.Location = new System.Drawing.Point(228, 116);
-            this.lbDireccion.Name = "lbDireccion";
-            this.lbDireccion.Size = new System.Drawing.Size(34, 13);
-            this.lbDireccion.TabIndex = 22;
-            this.lbDireccion.Text = "---------";
+            this.lblDuracion.AutoSize = true;
+            this.lblDuracion.Location = new System.Drawing.Point(228, 116);
+            this.lblDuracion.Name = "lblDuracion";
+            this.lblDuracion.Size = new System.Drawing.Size(34, 13);
+            this.lblDuracion.TabIndex = 22;
+            this.lblDuracion.Text = "---------";
             // 
             // lblNombre
             // 
@@ -268,27 +260,27 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(114, 168);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(94, 13);
+            this.label5.Size = new System.Drawing.Size(46, 13);
             this.label5.TabIndex = 20;
-            this.label5.Text = "Correo Electronico";
+            this.label5.Text = "Profesor";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(114, 142);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(32, 13);
+            this.label6.Size = new System.Drawing.Size(41, 13);
             this.label6.TabIndex = 18;
-            this.label6.Text = "Edad";
+            this.label6.Text = "Horario";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(114, 116);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.Size = new System.Drawing.Size(50, 13);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Direccion";
+            this.label7.Text = "Duracion";
             // 
             // txtIdMostrar
             // 
@@ -314,13 +306,12 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Mostrar";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabPage3
             // 
-            this.tabPage3.Controls.Add(this.txtUpdateCorreo);
-            this.tabPage3.Controls.Add(this.txtUpdateEdad);
-            this.tabPage3.Controls.Add(this.txtUpdateDireccion);
+            this.tabPage3.Controls.Add(this.txtUpdateProfesor);
+            this.tabPage3.Controls.Add(this.txtUpdateHorario);
+            this.tabPage3.Controls.Add(this.txtUpdateDuracion);
             this.tabPage3.Controls.Add(this.txtUpdateNombre);
             this.tabPage3.Controls.Add(this.btnModificarUpdate);
             this.tabPage3.Controls.Add(this.label14);
@@ -333,32 +324,31 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(452, 272);
+            this.tabPage3.Size = new System.Drawing.Size(452, 274);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Modificar";
             this.tabPage3.UseVisualStyleBackColor = true;
-            this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
-            // txtUpdateCorreo
+            // txtUpdateProfesor
             // 
-            this.txtUpdateCorreo.Location = new System.Drawing.Point(176, 144);
-            this.txtUpdateCorreo.Name = "txtUpdateCorreo";
-            this.txtUpdateCorreo.Size = new System.Drawing.Size(153, 20);
-            this.txtUpdateCorreo.TabIndex = 40;
+            this.txtUpdateProfesor.Location = new System.Drawing.Point(176, 144);
+            this.txtUpdateProfesor.Name = "txtUpdateProfesor";
+            this.txtUpdateProfesor.Size = new System.Drawing.Size(153, 20);
+            this.txtUpdateProfesor.TabIndex = 40;
             // 
-            // txtUpdateEdad
+            // txtUpdateHorario
             // 
-            this.txtUpdateEdad.Location = new System.Drawing.Point(176, 118);
-            this.txtUpdateEdad.Name = "txtUpdateEdad";
-            this.txtUpdateEdad.Size = new System.Drawing.Size(153, 20);
-            this.txtUpdateEdad.TabIndex = 39;
+            this.txtUpdateHorario.Location = new System.Drawing.Point(176, 118);
+            this.txtUpdateHorario.Name = "txtUpdateHorario";
+            this.txtUpdateHorario.Size = new System.Drawing.Size(153, 20);
+            this.txtUpdateHorario.TabIndex = 39;
             // 
-            // txtUpdateDireccion
+            // txtUpdateDuracion
             // 
-            this.txtUpdateDireccion.Location = new System.Drawing.Point(176, 92);
-            this.txtUpdateDireccion.Name = "txtUpdateDireccion";
-            this.txtUpdateDireccion.Size = new System.Drawing.Size(153, 20);
-            this.txtUpdateDireccion.TabIndex = 38;
+            this.txtUpdateDuracion.Location = new System.Drawing.Point(176, 92);
+            this.txtUpdateDuracion.Name = "txtUpdateDuracion";
+            this.txtUpdateDuracion.Size = new System.Drawing.Size(153, 20);
+            this.txtUpdateDuracion.TabIndex = 38;
             // 
             // txtUpdateNombre
             // 
@@ -376,7 +366,6 @@
             this.btnModificarUpdate.TabIndex = 36;
             this.btnModificarUpdate.Text = "Modificar";
             this.btnModificarUpdate.UseVisualStyleBackColor = true;
-            this.btnModificarUpdate.Click += new System.EventHandler(this.btnModificarUpdate_Click);
             // 
             // label14
             // 
@@ -392,27 +381,27 @@
             this.label15.AutoSize = true;
             this.label15.Location = new System.Drawing.Point(76, 147);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(94, 13);
+            this.label15.Size = new System.Drawing.Size(46, 13);
             this.label15.TabIndex = 31;
-            this.label15.Text = "Correo Electronico";
+            this.label15.Text = "Profesor";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
             this.label16.Location = new System.Drawing.Point(76, 121);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(32, 13);
+            this.label16.Size = new System.Drawing.Size(41, 13);
             this.label16.TabIndex = 30;
-            this.label16.Text = "Edad";
+            this.label16.Text = "Horario";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Location = new System.Drawing.Point(76, 95);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(52, 13);
+            this.label17.Size = new System.Drawing.Size(50, 13);
             this.label17.TabIndex = 29;
-            this.label17.Text = "Direccion";
+            this.label17.Text = "Duracion";
             // 
             // txtUpdateId
             // 
@@ -438,7 +427,6 @@
             this.btnBuscarUpdate.TabIndex = 27;
             this.btnBuscarUpdate.Text = "Buscar";
             this.btnBuscarUpdate.UseVisualStyleBackColor = true;
-            this.btnBuscarUpdate.Click += new System.EventHandler(this.button3_Click);
             // 
             // tabPage4
             // 
@@ -461,17 +449,15 @@
             this.btnDelete.TabIndex = 32;
             this.btnDelete.Text = "Borrar";
             this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(33, 54);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(185, 13);
+            this.label10.Size = new System.Drawing.Size(176, 13);
             this.label10.TabIndex = 29;
-            this.label10.Text = "Ingrese el Id del Alumno a ser borrado";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.label10.Text = "Ingrese el Id del curso a ser borrado";
             // 
             // txtDeleteId
             // 
@@ -479,17 +465,15 @@
             this.txtDeleteId.Name = "txtDeleteId";
             this.txtDeleteId.Size = new System.Drawing.Size(129, 20);
             this.txtDeleteId.TabIndex = 31;
-            this.txtDeleteId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // Alumno
+            // Calificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 361);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Alumno";
-            this.Text = "Alumno";
-            this.Load += new System.EventHandler(this.Alumno_Load);
+            this.Name = "Calificacion";
+            this.Text = "Calificacion";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -507,22 +491,19 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.ComboBox cmbCorreo;
-        private System.Windows.Forms.TextBox txtCorreo;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtEdad;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtDireccion;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbHorario;
+        private System.Windows.Forms.ComboBox cmbDuracion;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lbCorreo;
-        private System.Windows.Forms.Label lbEdad;
-        private System.Windows.Forms.Label lbDireccion;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Label lblProfesor;
+        private System.Windows.Forms.Label lblHorario;
+        private System.Windows.Forms.Label lblDuracion;
+        private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
@@ -530,11 +511,10 @@
         private System.Windows.Forms.TextBox txtIdMostrar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox lbNombre;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtUpdateCorreo;
-        private System.Windows.Forms.TextBox txtUpdateEdad;
-        private System.Windows.Forms.TextBox txtUpdateDireccion;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox txtUpdateProfesor;
+        private System.Windows.Forms.TextBox txtUpdateHorario;
+        private System.Windows.Forms.TextBox txtUpdateDuracion;
         private System.Windows.Forms.TextBox txtUpdateNombre;
         private System.Windows.Forms.Button btnModificarUpdate;
         private System.Windows.Forms.Label label14;
@@ -544,8 +524,9 @@
         private System.Windows.Forms.TextBox txtUpdateId;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnBuscarUpdate;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDeleteId;
-        private System.Windows.Forms.Button btnDelete;
     }
 }

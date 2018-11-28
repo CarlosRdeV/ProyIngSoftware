@@ -33,5 +33,23 @@ namespace ProyectoIngenieriaSoftware
             Alumno al = new Alumno();
             al.Show();
         }
+
+        private void btnCrearProfe_Click(object sender, EventArgs e)
+        {
+            Profesor pr = new Profesor();
+            pr.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnCrearCurso_Click(object sender, EventArgs e)
+        {
+            Curso curso = new Curso();
+            curso.Show();
+                   
+        }
     }
 }
