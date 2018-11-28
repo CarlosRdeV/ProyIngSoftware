@@ -51,5 +51,11 @@ namespace ProyectoIngenieriaSoftware
             curso.Show();
                    
         }
+
+        private void btnCalificaciones_Click(object sender, EventArgs e)
+        {
+            Calificacion cal = new Calificacion();
+            cal.Show();
+        }
     }
 }

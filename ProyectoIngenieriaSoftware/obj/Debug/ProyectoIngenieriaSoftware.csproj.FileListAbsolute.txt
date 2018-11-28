@@ -24,3 +24,4 @@ E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.exe
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.pdb
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Profesor.resources
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Curso.resources
+E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Calificacion.resources

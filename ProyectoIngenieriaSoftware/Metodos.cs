@@ -30,6 +30,12 @@ namespace ProyectoIngenieriaSoftware.Recursos
         public static string HorarioCurso = "";
         public static string ProfesorCurso = "";
 
+        //CALIFICACIONES
+
+        public static string IDALUMNO = "";
+        public static string IDCURSO = "";
+        public static string CALIFICACION = ""; 
+
 
         public static string cad_con = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\ProyectoIngenieriaSoftware\Recursos\escuela.mdb";
         public static OleDbConnection con;
@@ -421,6 +427,98 @@ namespace ProyectoIngenieriaSoftware.Recursos
 
         }
 
+        public static void MostrarCalificacion(string id)
+        {
+            try
+            {
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT IDALUMNO, IDCURSO, CALIFICACION FROM CALIFICACIONES WHERE Id=" + id;
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    //To do
+                    //Crear nuevas variables, solo para profesor
+                    //Cambiar
+                    IDALUMNO = reader.GetValue(0).ToString();
+                    IDCURSO = reader.GetValue(1).ToString();
+                    CALIFICACION = reader.GetValue(2).ToString();
+                    
+                }
+
+
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+
+
+            }
+
+        }
+
+        public static void EliminarCalificacion(string id)
+        {
+            try
+            {
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+
+                cmd.CommandText = "DELETE FROM CALIFICACIONES WHERE Id=" + id;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Calificacion Eliminada con exito");
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+
+            }
+
+        }
+
+        public static void ActualizarCalificacion(string id, string idalumno, string idcurso, string calificacion)
+        {
+            try
+            {
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                // "UPDATE Records SET FirstName = @firstname, LastName = @lastname, Age = @age, Address = @address, Course = @course WHERE FirstName = @firstname";
+                //cmd.CommandText = "UPDATE ALUMNOS SET NOMBRE = (NOMBRE,DIRECCION,EDAD,CORREOELECTRONICO) VALUES ('" + nombre + "','" + direccion + "'," + edad + ",'" + correo + "')";
+                cmd.CommandText = "UPDATE CALIFICACIONES SET IDALUMNO = " + idalumno + " , idcurso = " + idcurso+ " , calificacion = " + calificacion + " WHERE Id = " + id;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Actualizado con exito");
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+
+            }
+
+        }
+
+
 
     }
+
+
 }

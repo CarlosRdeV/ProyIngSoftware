@@ -143,6 +143,7 @@
             this.btnCalificaciones.TabIndex = 22;
             this.btnCalificaciones.Text = "Calificaciones";
             this.btnCalificaciones.UseVisualStyleBackColor = true;
+            this.btnCalificaciones.Click += new System.EventHandler(this.btnCalificaciones_Click);
             // 
             // btnSalir
             // 
