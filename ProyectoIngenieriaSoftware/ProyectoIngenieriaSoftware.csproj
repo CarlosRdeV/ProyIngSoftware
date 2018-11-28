@@ -76,6 +76,12 @@
     <Compile Include="IngresoAdmin.Designer.cs">
       <DependentUpon>IngresoAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inscripcion.Designer.cs">
+      <DependentUpon>Inscripcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Metodos.cs" />
     <Compile Include="Profesor.cs">
       <SubType>Form</SubType>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte.Designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Alumno.resx">
       <DependentUpon>Alumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,6 +112,9 @@
     <EmbeddedResource Include="IngresoAdmin.resx">
       <DependentUpon>IngresoAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Inscripcion.resx">
+      <DependentUpon>Inscripcion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Profesor.resx">
       <DependentUpon>Profesor.cs</DependentUpon>
     </EmbeddedResource>
@@ -113,6 +128,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -40,12 +40,13 @@
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnCalificaciones = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.Inscripcion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(308, 45);
+            this.label1.Location = new System.Drawing.Point(55, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 0;
@@ -72,7 +73,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(228, 104);
+            this.label4.Location = new System.Drawing.Point(189, 104);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(57, 13);
             this.label4.TabIndex = 3;
@@ -81,7 +82,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(411, 104);
+            this.label5.Location = new System.Drawing.Point(316, 104);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 4;
@@ -90,7 +91,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(582, 104);
+            this.label6.Location = new System.Drawing.Point(455, 104);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 13);
             this.label6.TabIndex = 5;
@@ -108,7 +109,7 @@
             // 
             // btnCrearProfe
             // 
-            this.btnCrearProfe.Location = new System.Drawing.Point(220, 143);
+            this.btnCrearProfe.Location = new System.Drawing.Point(181, 143);
             this.btnCrearProfe.Name = "btnCrearProfe";
             this.btnCrearProfe.Size = new System.Drawing.Size(86, 23);
             this.btnCrearProfe.TabIndex = 11;
@@ -118,7 +119,7 @@
             // 
             // btnCrearCurso
             // 
-            this.btnCrearCurso.Location = new System.Drawing.Point(397, 143);
+            this.btnCrearCurso.Location = new System.Drawing.Point(302, 143);
             this.btnCrearCurso.Name = "btnCrearCurso";
             this.btnCrearCurso.Size = new System.Drawing.Size(86, 23);
             this.btnCrearCurso.TabIndex = 16;
@@ -128,16 +129,17 @@
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(351, 244);
+            this.btnReportes.Location = new System.Drawing.Point(302, 192);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(86, 23);
             this.btnReportes.TabIndex = 21;
             this.btnReportes.Text = "Reportes";
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnCalificaciones
             // 
-            this.btnCalificaciones.Location = new System.Drawing.Point(568, 143);
+            this.btnCalificaciones.Location = new System.Drawing.Point(441, 143);
             this.btnCalificaciones.Name = "btnCalificaciones";
             this.btnCalificaciones.Size = new System.Drawing.Size(86, 23);
             this.btnCalificaciones.TabIndex = 22;
@@ -147,19 +149,30 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(327, 368);
+            this.btnSalir.Location = new System.Drawing.Point(244, 243);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(86, 23);
             this.btnSalir.TabIndex = 26;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // Inscripcion
+            // 
+            this.Inscripcion.Location = new System.Drawing.Point(181, 192);
+            this.Inscripcion.Name = "Inscripcion";
+            this.Inscripcion.Size = new System.Drawing.Size(86, 23);
+            this.Inscripcion.TabIndex = 27;
+            this.Inscripcion.Text = "Inscripcion";
+            this.Inscripcion.UseVisualStyleBackColor = true;
+            this.Inscripcion.Click += new System.EventHandler(this.Inscripcion_Click);
+            // 
             // IngresoAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(718, 414);
+            this.ClientSize = new System.Drawing.Size(553, 317);
+            this.Controls.Add(this.Inscripcion);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCalificaciones);
             this.Controls.Add(this.btnReportes);
@@ -193,5 +206,6 @@
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnCalificaciones;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button Inscripcion;
     }
 }

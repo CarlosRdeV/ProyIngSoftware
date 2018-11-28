@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.txtIDcurso = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbCalificacion = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -40,29 +41,28 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblIDcurso = new System.Windows.Forms.Label();
-            this.lblIDalumno = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdMostrar = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtUpdateCalificacion = new System.Windows.Forms.TextBox();
             this.txtUpdateIDcurso = new System.Windows.Forms.TextBox();
-            this.txtUpdateIDalumno = new System.Windows.Forms.TextBox();
             this.btnModificarUpdate = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txtUpdateId = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.btnBuscarUpdate = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtDeleteId = new System.Windows.Forms.TextBox();
-            this.txtIDcurso = new System.Windows.Forms.TextBox();
+            this.txtUpdateIDalumno = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lblIDalumno = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -99,6 +99,13 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Crear";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // txtIDcurso
+            // 
+            this.txtIDcurso.Location = new System.Drawing.Point(134, 101);
+            this.txtIDcurso.Name = "txtIDcurso";
+            this.txtIDcurso.Size = new System.Drawing.Size(149, 20);
+            this.txtIDcurso.TabIndex = 19;
             // 
             // label2
             // 
@@ -210,15 +217,6 @@
             this.lblIDcurso.TabIndex = 22;
             this.lblIDcurso.Text = "---------";
             // 
-            // lblIDalumno
-            // 
-            this.lblIDalumno.AutoSize = true;
-            this.lblIDalumno.Location = new System.Drawing.Point(228, 90);
-            this.lblIDalumno.Name = "lblIDalumno";
-            this.lblIDalumno.Size = new System.Drawing.Size(34, 13);
-            this.lblIDalumno.TabIndex = 21;
-            this.lblIDalumno.Text = "---------";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -252,15 +250,6 @@
             this.txtIdMostrar.Name = "txtIdMostrar";
             this.txtIdMostrar.Size = new System.Drawing.Size(75, 20);
             this.txtIdMostrar.TabIndex = 15;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(114, 90);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "ID Alumno";
             // 
             // button2
             // 
@@ -306,14 +295,6 @@
             this.txtUpdateIDcurso.Size = new System.Drawing.Size(153, 20);
             this.txtUpdateIDcurso.TabIndex = 38;
             // 
-            // txtUpdateIDalumno
-            // 
-            this.txtUpdateIDalumno.Location = new System.Drawing.Point(176, 78);
-            this.txtUpdateIDalumno.Name = "txtUpdateIDalumno";
-            this.txtUpdateIDalumno.Size = new System.Drawing.Size(153, 20);
-            this.txtUpdateIDalumno.TabIndex = 37;
-            this.txtUpdateIDalumno.Text = " ";
-            // 
             // btnModificarUpdate
             // 
             this.btnModificarUpdate.Location = new System.Drawing.Point(176, 171);
@@ -357,15 +338,6 @@
             this.txtUpdateId.Name = "txtUpdateId";
             this.txtUpdateId.Size = new System.Drawing.Size(129, 20);
             this.txtUpdateId.TabIndex = 28;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(76, 81);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(56, 13);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "ID Alumno";
             // 
             // btnBuscarUpdate
             // 
@@ -417,12 +389,40 @@
             this.txtDeleteId.Size = new System.Drawing.Size(129, 20);
             this.txtDeleteId.TabIndex = 31;
             // 
-            // txtIDcurso
+            // txtUpdateIDalumno
             // 
-            this.txtIDcurso.Location = new System.Drawing.Point(134, 101);
-            this.txtIDcurso.Name = "txtIDcurso";
-            this.txtIDcurso.Size = new System.Drawing.Size(149, 20);
-            this.txtIDcurso.TabIndex = 19;
+            this.txtUpdateIDalumno.Location = new System.Drawing.Point(176, 78);
+            this.txtUpdateIDalumno.Name = "txtUpdateIDalumno";
+            this.txtUpdateIDalumno.Size = new System.Drawing.Size(153, 20);
+            this.txtUpdateIDalumno.TabIndex = 37;
+            this.txtUpdateIDalumno.Text = " ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(76, 81);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(56, 13);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "ID Alumno";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(114, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "ID Alumno";
+            // 
+            // lblIDalumno
+            // 
+            this.lblIDalumno.AutoSize = true;
+            this.lblIDalumno.Location = new System.Drawing.Point(228, 90);
+            this.lblIDalumno.Name = "lblIDalumno";
+            this.lblIDalumno.Size = new System.Drawing.Size(34, 13);
+            this.lblIDalumno.TabIndex = 21;
+            this.lblIDalumno.Text = "---------";
             // 
             // Calificacion
             // 
@@ -459,28 +459,28 @@
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.Label lblCalificacion;
         private System.Windows.Forms.Label lblIDcurso;
-        private System.Windows.Forms.Label lblIDalumno;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtIdMostrar;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox txtUpdateCalificacion;
         private System.Windows.Forms.TextBox txtUpdateIDcurso;
-        private System.Windows.Forms.TextBox txtUpdateIDalumno;
         private System.Windows.Forms.Button btnModificarUpdate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox txtUpdateId;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnBuscarUpdate;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDeleteId;
         private System.Windows.Forms.TextBox txtIDcurso;
+        private System.Windows.Forms.Label lblIDalumno;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtUpdateIDalumno;
+        private System.Windows.Forms.Label label18;
     }
 }

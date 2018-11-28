@@ -34,8 +34,20 @@ namespace ProyectoIngenieriaSoftware.Recursos
 
         public static string IDALUMNO = "";
         public static string IDCURSO = "";
-        public static string CALIFICACION = ""; 
+        public static string CALIFICACION = "";
 
+        //Metodos
+
+        public static string curso1 = "";
+        public static string curso2 = "";
+        public static string curso3 = "";
+        public static string curso4 = "";
+        public static string curso5 = "";
+        public static string cal1 = "";
+        public static string cal2 = "";
+        public static string cal3 = "";
+        public static string cal4 = "";
+        public static string cal5 = "";
 
         public static string cad_con = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\ProyectoIngenieriaSoftware\Recursos\escuela.mdb";
         public static OleDbConnection con;
@@ -516,7 +528,166 @@ namespace ProyectoIngenieriaSoftware.Recursos
 
         }
 
+        //Reportes
 
+        public static string cantidadInscritosCurso(string id)
+        {
+            try
+            {
+                int cuantos = 0;
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT * FROM CALIFICACIONES WHERE IdCurso=" + id;
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    //To do
+                    //Crear nuevas variables, solo para profesor
+                    //Cambiar
+                    //IDALUMNO = reader.GetValue(0).ToString();
+                    //IDCURSO = reader.GetValue(1).ToString();
+                    //CALIFICACION = reader.GetValue(2).ToString();
+                    cuantos++;
+                }
+               
+                con.Close();
+
+                return Convert.ToString(cuantos);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                return "0";
+
+            }
+
+        }
+
+        public static string PromedioCurso(string id)
+        {
+            try
+            {
+                int cuantos = 0;
+                int sumaCal = 0;
+                int promedio = 0;
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT calificacion FROM CALIFICACIONES WHERE IdCurso=" + id;
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                   
+                    if(Convert.ToInt32(reader.GetValue(0).ToString()) > 0) {
+                        cuantos++;
+                        sumaCal = sumaCal + Convert.ToInt32(reader.GetValue(0).ToString());
+                    }
+                    
+                }
+                con.Close();
+                if (cuantos > 0) {
+                    promedio = sumaCal / cuantos;
+                }
+                else {
+                    promedio = 0;
+                }
+               
+                return Convert.ToString(promedio);
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                return "0";
+
+            }
+
+        }
+
+        public static void CalificacionesAlumno(string id)
+        {
+            try
+            {
+                int cuantos = 0;
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT IdCurso, calificacion FROM CALIFICACIONES WHERE IdAlumno=" + id;
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cuantos++;
+
+                    switch (cuantos)
+                    {
+                        case 1:
+
+                            curso1 = reader.GetValue(0).ToString();
+                            cal1 = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 2:
+
+                            curso2 = reader.GetValue(0).ToString();
+                            cal2 = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 3:
+
+                            curso3 = reader.GetValue(0).ToString();
+                            cal3 = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 4:
+
+                            curso4 = reader.GetValue(0).ToString();
+                            cal4 = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 5:
+
+                            curso5 = reader.GetValue(0).ToString();
+                            cal5 = reader.GetValue(1).ToString();
+
+                            break;
+                    }                 
+
+                }
+                con.Close();
+                
+
+                
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                
+
+            }
+
+        }
 
     }
 
