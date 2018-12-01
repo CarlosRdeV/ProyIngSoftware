@@ -63,6 +63,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtDeleteId = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -76,7 +77,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(29, 37);
+            this.tabControl1.Location = new System.Drawing.Point(27, 20);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(460, 300);
@@ -419,11 +420,22 @@
             this.txtDeleteId.Size = new System.Drawing.Size(129, 20);
             this.txtDeleteId.TabIndex = 34;
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(408, 326);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 25;
+            this.button3.Text = "Cerrar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Profesor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 361);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.tabControl1);
             this.Name = "Profesor";
             this.Text = "Profesor";
@@ -478,5 +490,6 @@
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDeleteId;
+        private System.Windows.Forms.Button button3;
     }
 }

@@ -30,33 +30,34 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.btn = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.txtCalificacionesId = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtIdCurso = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.lblCuantos = new System.Windows.Forms.Label();
             this.lblPromedio = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtIdPromedio = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnPromedio = new System.Windows.Forms.Button();
-            this.lblCurso2 = new System.Windows.Forms.Label();
-            this.lblCal2 = new System.Windows.Forms.Label();
-            this.lblCurso3 = new System.Windows.Forms.Label();
-            this.lblCal3 = new System.Windows.Forms.Label();
-            this.lblCurso4 = new System.Windows.Forms.Label();
-            this.lblCal4 = new System.Windows.Forms.Label();
-            this.lblCurso5 = new System.Windows.Forms.Label();
-            this.lblCal5 = new System.Windows.Forms.Label();
-            this.lblCurso1 = new System.Windows.Forms.Label();
-            this.lblCal1 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.lblCuantos = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtIdCurso = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblCal1 = new System.Windows.Forms.Label();
+            this.lblCurso1 = new System.Windows.Forms.Label();
+            this.lblCal5 = new System.Windows.Forms.Label();
+            this.lblCurso5 = new System.Windows.Forms.Label();
+            this.lblCal4 = new System.Windows.Forms.Label();
+            this.lblCurso4 = new System.Windows.Forms.Label();
+            this.lblCal3 = new System.Windows.Forms.Label();
+            this.lblCurso3 = new System.Windows.Forms.Label();
+            this.lblCal2 = new System.Windows.Forms.Label();
+            this.lblCurso2 = new System.Windows.Forms.Label();
+            this.btn = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.txtCalificacionesId = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -68,10 +69,10 @@
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(27, 30);
+            this.tabControl1.Location = new System.Drawing.Point(26, 17);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(460, 352);
+            this.tabControl1.Size = new System.Drawing.Size(460, 326);
             this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
@@ -84,120 +85,10 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(452, 326);
+            this.tabPage1.Size = new System.Drawing.Size(452, 300);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Promedio de Curso";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.lblCuantos);
-            this.tabPage2.Controls.Add(this.label9);
-            this.tabPage2.Controls.Add(this.txtIdCurso);
-            this.tabPage2.Controls.Add(this.label8);
-            this.tabPage2.Controls.Add(this.button2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(452, 274);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Alumnos en curso";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.label1);
-            this.tabPage3.Controls.Add(this.lblCal1);
-            this.tabPage3.Controls.Add(this.lblCurso1);
-            this.tabPage3.Controls.Add(this.lblCal5);
-            this.tabPage3.Controls.Add(this.lblCurso5);
-            this.tabPage3.Controls.Add(this.lblCal4);
-            this.tabPage3.Controls.Add(this.lblCurso4);
-            this.tabPage3.Controls.Add(this.lblCal3);
-            this.tabPage3.Controls.Add(this.lblCurso3);
-            this.tabPage3.Controls.Add(this.lblCal2);
-            this.tabPage3.Controls.Add(this.lblCurso2);
-            this.tabPage3.Controls.Add(this.btn);
-            this.tabPage3.Controls.Add(this.label14);
-            this.tabPage3.Controls.Add(this.txtCalificacionesId);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(452, 326);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Mostrar Calificaciones";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // btn
-            // 
-            this.btn.Location = new System.Drawing.Point(193, 282);
-            this.btn.Name = "btn";
-            this.btn.Size = new System.Drawing.Size(75, 23);
-            this.btn.TabIndex = 36;
-            this.btn.Text = "Buscar";
-            this.btn.UseVisualStyleBackColor = true;
-            this.btn.Click += new System.EventHandler(this.btn_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(37, 36);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(110, 13);
-            this.label14.TabIndex = 25;
-            this.label14.Text = "Inserte un Id a buscar";
-            // 
-            // txtCalificacionesId
-            // 
-            this.txtCalificacionesId.Location = new System.Drawing.Point(176, 33);
-            this.txtCalificacionesId.Name = "txtCalificacionesId";
-            this.txtCalificacionesId.Size = new System.Drawing.Size(129, 20);
-            this.txtCalificacionesId.TabIndex = 28;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(220, 200);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "Mostrar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(118, 114);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(162, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Cantidad de Alumnos en el curso";
-            // 
-            // txtIdCurso
-            // 
-            this.txtIdCurso.Location = new System.Drawing.Point(259, 78);
-            this.txtIdCurso.Name = "txtIdCurso";
-            this.txtIdCurso.Size = new System.Drawing.Size(75, 20);
-            this.txtIdCurso.TabIndex = 15;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(118, 81);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 13);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Inserte un Id a buscar";
-            // 
-            // lblCuantos
-            // 
-            this.lblCuantos.AutoSize = true;
-            this.lblCuantos.Location = new System.Drawing.Point(300, 114);
-            this.lblCuantos.Name = "lblCuantos";
-            this.lblCuantos.Size = new System.Drawing.Size(34, 13);
-            this.lblCuantos.TabIndex = 21;
-            this.lblCuantos.Text = "---------";
             // 
             // lblPromedio
             // 
@@ -235,7 +126,7 @@
             // 
             // btnPromedio
             // 
-            this.btnPromedio.Location = new System.Drawing.Point(220, 187);
+            this.btnPromedio.Location = new System.Drawing.Point(193, 168);
             this.btnPromedio.Name = "btnPromedio";
             this.btnPromedio.Size = new System.Drawing.Size(75, 23);
             this.btnPromedio.TabIndex = 24;
@@ -243,88 +134,107 @@
             this.btnPromedio.UseVisualStyleBackColor = true;
             this.btnPromedio.Click += new System.EventHandler(this.btnPromedio_Click);
             // 
-            // lblCurso2
+            // tabPage2
             // 
-            this.lblCurso2.AutoSize = true;
-            this.lblCurso2.Location = new System.Drawing.Point(76, 143);
-            this.lblCurso2.Name = "lblCurso2";
-            this.lblCurso2.Size = new System.Drawing.Size(25, 13);
-            this.lblCurso2.TabIndex = 37;
-            this.lblCurso2.Text = "------";
+            this.tabPage2.Controls.Add(this.lblCuantos);
+            this.tabPage2.Controls.Add(this.label9);
+            this.tabPage2.Controls.Add(this.txtIdCurso);
+            this.tabPage2.Controls.Add(this.label8);
+            this.tabPage2.Controls.Add(this.button2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(452, 326);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Alumnos en curso";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // lblCal2
+            // lblCuantos
             // 
-            this.lblCal2.AutoSize = true;
-            this.lblCal2.Location = new System.Drawing.Point(210, 143);
-            this.lblCal2.Name = "lblCal2";
-            this.lblCal2.Size = new System.Drawing.Size(25, 13);
-            this.lblCal2.TabIndex = 38;
-            this.lblCal2.Text = "------";
+            this.lblCuantos.AutoSize = true;
+            this.lblCuantos.Location = new System.Drawing.Point(300, 114);
+            this.lblCuantos.Name = "lblCuantos";
+            this.lblCuantos.Size = new System.Drawing.Size(34, 13);
+            this.lblCuantos.TabIndex = 21;
+            this.lblCuantos.Text = "---------";
             // 
-            // lblCurso3
+            // label9
             // 
-            this.lblCurso3.AutoSize = true;
-            this.lblCurso3.Location = new System.Drawing.Point(76, 173);
-            this.lblCurso3.Name = "lblCurso3";
-            this.lblCurso3.Size = new System.Drawing.Size(25, 13);
-            this.lblCurso3.TabIndex = 39;
-            this.lblCurso3.Text = "------";
-            this.lblCurso3.Click += new System.EventHandler(this.lblCurso3_Click);
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(118, 81);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(110, 13);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Inserte un Id a buscar";
             // 
-            // lblCal3
+            // txtIdCurso
             // 
-            this.lblCal3.AutoSize = true;
-            this.lblCal3.Location = new System.Drawing.Point(210, 173);
-            this.lblCal3.Name = "lblCal3";
-            this.lblCal3.Size = new System.Drawing.Size(25, 13);
-            this.lblCal3.TabIndex = 40;
-            this.lblCal3.Text = "------";
+            this.txtIdCurso.Location = new System.Drawing.Point(259, 78);
+            this.txtIdCurso.Name = "txtIdCurso";
+            this.txtIdCurso.Size = new System.Drawing.Size(75, 20);
+            this.txtIdCurso.TabIndex = 15;
             // 
-            // lblCurso4
+            // label8
             // 
-            this.lblCurso4.AutoSize = true;
-            this.lblCurso4.Location = new System.Drawing.Point(76, 206);
-            this.lblCurso4.Name = "lblCurso4";
-            this.lblCurso4.Size = new System.Drawing.Size(25, 13);
-            this.lblCurso4.TabIndex = 41;
-            this.lblCurso4.Text = "------";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(118, 114);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(162, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Cantidad de Alumnos en el curso";
             // 
-            // lblCal4
+            // button2
             // 
-            this.lblCal4.AutoSize = true;
-            this.lblCal4.Location = new System.Drawing.Point(210, 206);
-            this.lblCal4.Name = "lblCal4";
-            this.lblCal4.Size = new System.Drawing.Size(25, 13);
-            this.lblCal4.TabIndex = 42;
-            this.lblCal4.Text = "------";
+            this.button2.Location = new System.Drawing.Point(220, 200);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Mostrar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // lblCurso5
+            // tabPage3
             // 
-            this.lblCurso5.AutoSize = true;
-            this.lblCurso5.Location = new System.Drawing.Point(76, 240);
-            this.lblCurso5.Name = "lblCurso5";
-            this.lblCurso5.Size = new System.Drawing.Size(25, 13);
-            this.lblCurso5.TabIndex = 43;
-            this.lblCurso5.Text = "------";
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.label1);
+            this.tabPage3.Controls.Add(this.lblCal1);
+            this.tabPage3.Controls.Add(this.lblCurso1);
+            this.tabPage3.Controls.Add(this.lblCal5);
+            this.tabPage3.Controls.Add(this.lblCurso5);
+            this.tabPage3.Controls.Add(this.lblCal4);
+            this.tabPage3.Controls.Add(this.lblCurso4);
+            this.tabPage3.Controls.Add(this.lblCal3);
+            this.tabPage3.Controls.Add(this.lblCurso3);
+            this.tabPage3.Controls.Add(this.lblCal2);
+            this.tabPage3.Controls.Add(this.lblCurso2);
+            this.tabPage3.Controls.Add(this.btn);
+            this.tabPage3.Controls.Add(this.label14);
+            this.tabPage3.Controls.Add(this.txtCalificacionesId);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(452, 326);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Mostrar Calificaciones";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // lblCal5
+            // label4
             // 
-            this.lblCal5.AutoSize = true;
-            this.lblCal5.Location = new System.Drawing.Point(210, 240);
-            this.lblCal5.Name = "lblCal5";
-            this.lblCal5.Size = new System.Drawing.Size(25, 13);
-            this.lblCal5.TabIndex = 44;
-            this.lblCal5.Text = "------";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(210, 76);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(64, 13);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Calificacion:";
             // 
-            // lblCurso1
+            // label1
             // 
-            this.lblCurso1.AutoSize = true;
-            this.lblCurso1.Location = new System.Drawing.Point(76, 109);
-            this.lblCurso1.Name = "lblCurso1";
-            this.lblCurso1.Size = new System.Drawing.Size(25, 13);
-            this.lblCurso1.TabIndex = 45;
-            this.lblCurso1.Text = "------";
-            this.lblCurso1.Click += new System.EventHandler(this.label15_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(76, 76);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(37, 13);
+            this.label1.TabIndex = 47;
+            this.label1.Text = "Curso:";
             // 
             // lblCal1
             // 
@@ -336,29 +246,130 @@
             this.lblCal1.Text = "------";
             this.lblCal1.Click += new System.EventHandler(this.label16_Click);
             // 
-            // label1
+            // lblCurso1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(76, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 47;
-            this.label1.Text = "Curso:";
+            this.lblCurso1.AutoSize = true;
+            this.lblCurso1.Location = new System.Drawing.Point(76, 109);
+            this.lblCurso1.Name = "lblCurso1";
+            this.lblCurso1.Size = new System.Drawing.Size(25, 13);
+            this.lblCurso1.TabIndex = 45;
+            this.lblCurso1.Text = "------";
+            this.lblCurso1.Click += new System.EventHandler(this.label15_Click);
             // 
-            // label4
+            // lblCal5
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(210, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 13);
-            this.label4.TabIndex = 48;
-            this.label4.Text = "Calificacion:";
+            this.lblCal5.AutoSize = true;
+            this.lblCal5.Location = new System.Drawing.Point(210, 240);
+            this.lblCal5.Name = "lblCal5";
+            this.lblCal5.Size = new System.Drawing.Size(25, 13);
+            this.lblCal5.TabIndex = 44;
+            this.lblCal5.Text = "------";
+            // 
+            // lblCurso5
+            // 
+            this.lblCurso5.AutoSize = true;
+            this.lblCurso5.Location = new System.Drawing.Point(76, 240);
+            this.lblCurso5.Name = "lblCurso5";
+            this.lblCurso5.Size = new System.Drawing.Size(25, 13);
+            this.lblCurso5.TabIndex = 43;
+            this.lblCurso5.Text = "------";
+            // 
+            // lblCal4
+            // 
+            this.lblCal4.AutoSize = true;
+            this.lblCal4.Location = new System.Drawing.Point(210, 206);
+            this.lblCal4.Name = "lblCal4";
+            this.lblCal4.Size = new System.Drawing.Size(25, 13);
+            this.lblCal4.TabIndex = 42;
+            this.lblCal4.Text = "------";
+            // 
+            // lblCurso4
+            // 
+            this.lblCurso4.AutoSize = true;
+            this.lblCurso4.Location = new System.Drawing.Point(76, 206);
+            this.lblCurso4.Name = "lblCurso4";
+            this.lblCurso4.Size = new System.Drawing.Size(25, 13);
+            this.lblCurso4.TabIndex = 41;
+            this.lblCurso4.Text = "------";
+            // 
+            // lblCal3
+            // 
+            this.lblCal3.AutoSize = true;
+            this.lblCal3.Location = new System.Drawing.Point(210, 173);
+            this.lblCal3.Name = "lblCal3";
+            this.lblCal3.Size = new System.Drawing.Size(25, 13);
+            this.lblCal3.TabIndex = 40;
+            this.lblCal3.Text = "------";
+            // 
+            // lblCurso3
+            // 
+            this.lblCurso3.AutoSize = true;
+            this.lblCurso3.Location = new System.Drawing.Point(76, 173);
+            this.lblCurso3.Name = "lblCurso3";
+            this.lblCurso3.Size = new System.Drawing.Size(25, 13);
+            this.lblCurso3.TabIndex = 39;
+            this.lblCurso3.Text = "------";
+            this.lblCurso3.Click += new System.EventHandler(this.lblCurso3_Click);
+            // 
+            // lblCal2
+            // 
+            this.lblCal2.AutoSize = true;
+            this.lblCal2.Location = new System.Drawing.Point(210, 143);
+            this.lblCal2.Name = "lblCal2";
+            this.lblCal2.Size = new System.Drawing.Size(25, 13);
+            this.lblCal2.TabIndex = 38;
+            this.lblCal2.Text = "------";
+            // 
+            // lblCurso2
+            // 
+            this.lblCurso2.AutoSize = true;
+            this.lblCurso2.Location = new System.Drawing.Point(76, 143);
+            this.lblCurso2.Name = "lblCurso2";
+            this.lblCurso2.Size = new System.Drawing.Size(25, 13);
+            this.lblCurso2.TabIndex = 37;
+            this.lblCurso2.Text = "------";
+            // 
+            // btn
+            // 
+            this.btn.Location = new System.Drawing.Point(193, 282);
+            this.btn.Name = "btn";
+            this.btn.Size = new System.Drawing.Size(75, 23);
+            this.btn.TabIndex = 36;
+            this.btn.Text = "Buscar";
+            this.btn.UseVisualStyleBackColor = true;
+            this.btn.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(37, 36);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(110, 13);
+            this.label14.TabIndex = 25;
+            this.label14.Text = "Inserte un Id a buscar";
+            // 
+            // txtCalificacionesId
+            // 
+            this.txtCalificacionesId.Location = new System.Drawing.Point(176, 33);
+            this.txtCalificacionesId.Name = "txtCalificacionesId";
+            this.txtCalificacionesId.Size = new System.Drawing.Size(129, 20);
+            this.txtCalificacionesId.TabIndex = 28;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(407, 349);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 27;
+            this.btnClose.Text = "Cerrar";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // Reporte
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 394);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tabControl1);
             this.Name = "Reporte";
             this.Text = "Reporte";
@@ -404,5 +415,6 @@
         private System.Windows.Forms.Label lblCurso2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnClose;
     }
 }

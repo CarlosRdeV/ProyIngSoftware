@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtProfesor = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.cmbHorario = new System.Windows.Forms.ComboBox();
             this.cmbDuracion = new System.Windows.Forms.ComboBox();
@@ -67,8 +69,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtDeleteId = new System.Windows.Forms.TextBox();
-            this.txtProfesor = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -107,6 +108,22 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Crear";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(273, 104);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(51, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Semanas";
+            // 
+            // txtProfesor
+            // 
+            this.txtProfesor.Location = new System.Drawing.Point(134, 164);
+            this.txtProfesor.Name = "txtProfesor";
+            this.txtProfesor.Size = new System.Drawing.Size(149, 20);
+            this.txtProfesor.TabIndex = 17;
             // 
             // label11
             // 
@@ -468,30 +485,26 @@
             this.txtDeleteId.Size = new System.Drawing.Size(129, 20);
             this.txtDeleteId.TabIndex = 31;
             // 
-            // txtProfesor
+            // btnClose
             // 
-            this.txtProfesor.Location = new System.Drawing.Point(134, 164);
-            this.txtProfesor.Name = "txtProfesor";
-            this.txtProfesor.Size = new System.Drawing.Size(149, 20);
-            this.txtProfesor.TabIndex = 17;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(273, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(51, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Semanas";
+            this.btnClose.Location = new System.Drawing.Point(410, 330);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 19;
+            this.btnClose.Text = "Cerrar";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // Curso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 361);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tabControl1);
             this.Name = "Curso";
             this.Text = "Curso";
+            this.Load += new System.EventHandler(this.Curso_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -548,5 +561,6 @@
         private System.Windows.Forms.ComboBox cmbDuracion;
         private System.Windows.Forms.TextBox txtProfesor;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnClose;
     }
 }

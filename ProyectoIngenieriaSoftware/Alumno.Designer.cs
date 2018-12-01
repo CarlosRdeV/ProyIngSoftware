@@ -69,6 +69,7 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtDeleteId = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -82,7 +83,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(26, 37);
+            this.tabControl1.Location = new System.Drawing.Point(26, 19);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(460, 300);
@@ -103,7 +104,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(452, 272);
+            this.tabPage1.Size = new System.Drawing.Size(452, 274);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Crear";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -213,7 +214,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(452, 272);
+            this.tabPage2.Size = new System.Drawing.Size(452, 274);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Mostrar";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -333,7 +334,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(452, 272);
+            this.tabPage3.Size = new System.Drawing.Size(452, 274);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Modificar";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -481,11 +482,22 @@
             this.txtDeleteId.TabIndex = 31;
             this.txtDeleteId.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(407, 321);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.Text = "Cerrar";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // Alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 361);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tabControl1);
             this.Name = "Alumno";
             this.Text = "Alumno";
@@ -547,5 +559,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtDeleteId;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClose;
     }
 }

@@ -22,6 +22,10 @@ namespace ProyectoIngenieriaSoftware
         {
             cmbCorreo.SelectedIndex = 0;
             cmbTipo.SelectedIndex = 0;
+            txtUpdateNombre.Enabled = false;
+            txtUpdateCorreo.Enabled = false;
+            txtUpdateTipo.Enabled = false;
+            btnModificarUpdate.Enabled = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -34,8 +38,10 @@ namespace ProyectoIngenieriaSoftware
 
             Metodos.CrearProfesor(txtNombre.Text,correo, tipo);
 
+            MessageBox.Show("Se ha creado el siguiente profesor: \nId: " + Metodos.idProfesorUltimo + "\nNombre: " + txtNombre.Text + " \nCorreo: " + correo + " \nTipo: " + tipo);
             txtNombre.Text = "";
             txtCorreo.Text = "";
+            Metodos.idProfesorUltimo = "";
             
         }
 
@@ -47,6 +53,10 @@ namespace ProyectoIngenieriaSoftware
             lblNombre.Text = Metodos.NombreProfesor;
             lblCorreo.Text = Metodos.CorreoProfesor;
             lblTipo.Text = Metodos.TipoIdProfesor;
+
+            Metodos.NombreProfesor = "";
+            Metodos.CorreoProfesor = "";
+            Metodos.TipoIdProfesor = "";
         }
 
         private void btnBuscarUpdate_Click(object sender, EventArgs e)
@@ -57,6 +67,31 @@ namespace ProyectoIngenieriaSoftware
             txtUpdateNombre.Text = Metodos.NombreProfesor;
             txtUpdateCorreo.Text = Metodos.CorreoProfesor;
             txtUpdateTipo.Text = Metodos.TipoIdProfesor;
+
+            Metodos.NombreProfesor = "";
+            Metodos.CorreoProfesor = "";
+            Metodos.TipoIdProfesor = "";
+            
+
+            if (txtUpdateNombre.Text != "")
+            {
+                txtUpdateNombre.Enabled = true;
+                txtUpdateCorreo.Enabled = true;
+                txtUpdateTipo.Enabled = true;
+                btnModificarUpdate.Enabled = true;
+
+            }
+            else
+            {
+
+                txtUpdateNombre.Enabled = false;
+                txtUpdateCorreo.Enabled = false;
+                txtUpdateTipo.Enabled = false;
+                btnModificarUpdate.Enabled = false;
+
+            }
+
+
         }
 
         private void btnModificarUpdate_Click(object sender, EventArgs e)
@@ -96,6 +131,11 @@ namespace ProyectoIngenieriaSoftware
                 case DialogResult.No:
                     break;
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

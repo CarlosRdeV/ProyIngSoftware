@@ -22,5 +22,10 @@ namespace ProyectoIngenieriaSoftware
         {
             Metodos.CrearCalificacion(txtIDalumnoInsc.Text, txtIDcursonsc.Text, "0");
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

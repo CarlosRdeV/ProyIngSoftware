@@ -41,28 +41,29 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.lblCalificacion = new System.Windows.Forms.Label();
             this.lblIDcurso = new System.Windows.Forms.Label();
+            this.lblIDalumno = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtIdMostrar = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.txtUpdateCalificacion = new System.Windows.Forms.TextBox();
             this.txtUpdateIDcurso = new System.Windows.Forms.TextBox();
+            this.txtUpdateIDalumno = new System.Windows.Forms.TextBox();
             this.btnModificarUpdate = new System.Windows.Forms.Button();
             this.label14 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txtUpdateId = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.btnBuscarUpdate = new System.Windows.Forms.Button();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.btnDelete = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.txtDeleteId = new System.Windows.Forms.TextBox();
-            this.txtUpdateIDalumno = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lblIDalumno = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -76,7 +77,7 @@
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Location = new System.Drawing.Point(25, 30);
+            this.tabControl1.Location = new System.Drawing.Point(22, 19);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(460, 300);
@@ -217,6 +218,15 @@
             this.lblIDcurso.TabIndex = 22;
             this.lblIDcurso.Text = "---------";
             // 
+            // lblIDalumno
+            // 
+            this.lblIDalumno.AutoSize = true;
+            this.lblIDalumno.Location = new System.Drawing.Point(228, 90);
+            this.lblIDalumno.Name = "lblIDalumno";
+            this.lblIDalumno.Size = new System.Drawing.Size(34, 13);
+            this.lblIDalumno.TabIndex = 21;
+            this.lblIDalumno.Text = "---------";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -250,6 +260,15 @@
             this.txtIdMostrar.Name = "txtIdMostrar";
             this.txtIdMostrar.Size = new System.Drawing.Size(75, 20);
             this.txtIdMostrar.TabIndex = 15;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(114, 90);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(56, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "ID Alumno";
             // 
             // button2
             // 
@@ -295,6 +314,14 @@
             this.txtUpdateIDcurso.Size = new System.Drawing.Size(153, 20);
             this.txtUpdateIDcurso.TabIndex = 38;
             // 
+            // txtUpdateIDalumno
+            // 
+            this.txtUpdateIDalumno.Location = new System.Drawing.Point(176, 78);
+            this.txtUpdateIDalumno.Name = "txtUpdateIDalumno";
+            this.txtUpdateIDalumno.Size = new System.Drawing.Size(153, 20);
+            this.txtUpdateIDalumno.TabIndex = 37;
+            this.txtUpdateIDalumno.Text = " ";
+            // 
             // btnModificarUpdate
             // 
             this.btnModificarUpdate.Location = new System.Drawing.Point(176, 171);
@@ -338,6 +365,15 @@
             this.txtUpdateId.Name = "txtUpdateId";
             this.txtUpdateId.Size = new System.Drawing.Size(129, 20);
             this.txtUpdateId.TabIndex = 28;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(76, 81);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(56, 13);
+            this.label18.TabIndex = 26;
+            this.label18.Text = "ID Alumno";
             // 
             // btnBuscarUpdate
             // 
@@ -389,46 +425,21 @@
             this.txtDeleteId.Size = new System.Drawing.Size(129, 20);
             this.txtDeleteId.TabIndex = 31;
             // 
-            // txtUpdateIDalumno
+            // btnClose
             // 
-            this.txtUpdateIDalumno.Location = new System.Drawing.Point(176, 78);
-            this.txtUpdateIDalumno.Name = "txtUpdateIDalumno";
-            this.txtUpdateIDalumno.Size = new System.Drawing.Size(153, 20);
-            this.txtUpdateIDalumno.TabIndex = 37;
-            this.txtUpdateIDalumno.Text = " ";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(76, 81);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(56, 13);
-            this.label18.TabIndex = 26;
-            this.label18.Text = "ID Alumno";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(114, 90);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(56, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "ID Alumno";
-            // 
-            // lblIDalumno
-            // 
-            this.lblIDalumno.AutoSize = true;
-            this.lblIDalumno.Location = new System.Drawing.Point(228, 90);
-            this.lblIDalumno.Name = "lblIDalumno";
-            this.lblIDalumno.Size = new System.Drawing.Size(34, 13);
-            this.lblIDalumno.TabIndex = 21;
-            this.lblIDalumno.Text = "---------";
+            this.btnClose.Location = new System.Drawing.Point(403, 321);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 20;
+            this.btnClose.Text = "Cerrar";
+            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // Calificacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(514, 361);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.tabControl1);
             this.Name = "Calificacion";
             this.Text = "Calificacion";
@@ -482,5 +493,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtUpdateIDalumno;
         private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btnClose;
     }
 }
