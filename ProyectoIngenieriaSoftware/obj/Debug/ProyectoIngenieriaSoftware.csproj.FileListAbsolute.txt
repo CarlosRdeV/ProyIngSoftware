@@ -25,5 +25,49 @@ E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.pdb
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Profesor.resources
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Curso.resources
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Calificacion.resources
-E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Inscripcion.resources
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\bin\Debug\ProyectoIngenieriaSoftware.exe.config
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\bin\Debug\ProyectoIngenieriaSoftware.exe
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\bin\Debug\ProyectoIngenieriaSoftware.pdb
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csprojResolveAssemblyReference.cache
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Alumno.resources
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Calificacion.resources
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Curso.resources
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Inicio.resources
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.IngresoAdmin.resources
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Profesor.resources
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Properties.Resources.resources
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csproj.GenerateResource.Cache
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csproj.CoreCompileInputs.cache
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.exe
+C:\Users\Moises Martin Campos\Desktop\CuatrimestreFinal\Ing.Software\Proyecto\ProyIngSoftware-master\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.pdb
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\bin\Debug\ProyectoIngenieriaSoftware.exe.config
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\bin\Debug\ProyectoIngenieriaSoftware.exe
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\bin\Debug\ProyectoIngenieriaSoftware.pdb
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csprojAssemblyReference.cache
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Alumno.resources
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Calificacion.resources
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Curso.resources
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Inicio.resources
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.IngresoAdmin.resources
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Profesor.resources
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Properties.Resources.resources
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csproj.GenerateResource.cache
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csproj.CoreCompileInputs.cache
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.exe
+C:\Users\RM9012\Documents\Z\Proyectos\ProyectoIngenieriaSoftware\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.pdb
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\bin\Debug\ProyectoIngenieriaSoftware.exe.config
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\bin\Debug\ProyectoIngenieriaSoftware.exe
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\bin\Debug\ProyectoIngenieriaSoftware.pdb
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csprojAssemblyReference.cache
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Alumno.resources
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Calificacion.resources
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Curso.resources
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Inicio.resources
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.IngresoAdmin.resources
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Profesor.resources
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Properties.Resources.resources
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csproj.GenerateResource.cache
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.csproj.CoreCompileInputs.cache
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.exe
+C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.pdb
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Reporte.resources

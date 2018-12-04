@@ -20,28 +20,14 @@ namespace ProyectoIngenieriaSoftware
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string duracion = cmbDuracion.Items[cmbDuracion.SelectedIndex].ToString();
-                string horario = cmbHorario.Items[cmbHorario.SelectedIndex].ToString();
+            
+            string duracion = cmbDuracion.Items[cmbDuracion.SelectedIndex].ToString();
+            string horario = cmbHorario.Items[cmbHorario.SelectedIndex].ToString();
 
-                Metodos.CrearCurso(txtNombre.Text, duracion, horario, txtProfesor.Text);
+            Metodos.CrearCurso(txtNombre.Text, duracion, horario, txtProfesor.Text);
 
-                MessageBox.Show("Se ha creado el siguiente curso: \nId: " + Metodos.idCursoUltimo + "\nNombre: " + txtNombre.Text + " \nDuracion: " + duracion + " semanas \nHorario: " + horario + " \nId del Profesor: " + txtProfesor.Text);
-
-                txtNombre.Text = "";
-                txtProfesor.Text = "";
-
-                Metodos.idCursoUltimo = "";
-            }
-            catch (Exception ex)
-            {
-                
-                MessageBox.Show(ex.ToString());
-            }
-
-            //
-           
+            txtNombre.Text = "";
+            txtProfesor.Text = "";
 
             
         }
@@ -50,24 +36,16 @@ namespace ProyectoIngenieriaSoftware
         {
             //TRae los valores pero no los muestra en los label
             Metodos.MostrarCurso(txtIdMostrar.Text);
-
             lblNombre.Text = Metodos.NombreCurso;
             lblDuracion.Text = Metodos.DuracionCurso;
             lblHorario.Text = Metodos.HorarioCurso;
             lblProfesor.Text = Metodos.ProfesorCurso;
-
-            Metodos.NombreCurso = "";
-            Metodos.DuracionCurso = "";
-            Metodos.HorarioCurso = "";
-            Metodos.ProfesorCurso = "";
-
-
-
+            
         }
 
         private void btnBuscarUpdate_Click(object sender, EventArgs e)
         {
-            Metodos.MostrarCurso(txtUpdateId.Text);
+            Metodos.MostrarCurso(txtIdMostrar.Text);
 
             txtUpdateNombre.Text = Metodos.NombreCurso;
             txtUpdateDuracion.Text = Metodos.DuracionCurso;
@@ -78,28 +56,6 @@ namespace ProyectoIngenieriaSoftware
             Metodos.DuracionCurso = "";
             Metodos.HorarioCurso= "";
             Metodos.ProfesorCurso= "";
-
-            if (txtUpdateNombre.Text != "")
-            {
-                txtUpdateNombre.Enabled = true;
-                txtUpdateHorario.Enabled = true;
-                txtUpdateDuracion.Enabled = true;
-                txtUpdateProfesor.Enabled = true;
-
-                btnModificarUpdate.Enabled = false;
-
-            }
-            else
-            {
-
-                txtUpdateNombre.Enabled = false;
-                txtUpdateHorario.Enabled = false;
-                txtUpdateDuracion.Enabled = false;
-                txtUpdateProfesor.Enabled = false;
-
-                btnModificarUpdate.Enabled = false;
-
-            }
         }
 
         private void btnModificarUpdate_Click(object sender, EventArgs e)
@@ -135,25 +91,6 @@ namespace ProyectoIngenieriaSoftware
                 case DialogResult.No:
                     break;
             }
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void Curso_Load(object sender, EventArgs e)
-        {
-            cmbHorario.SelectedIndex = 0;
-            cmbDuracion.SelectedIndex = 0;
-
-            txtUpdateNombre.Enabled = false;
-            txtUpdateHorario.Enabled = false;
-            txtUpdateDuracion.Enabled = false;
-            txtUpdateProfesor.Enabled = false;
-
-            btnModificarUpdate.Enabled = false;
-
         }
     }
 }

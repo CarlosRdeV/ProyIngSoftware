@@ -70,7 +70,7 @@ namespace ProyectoIngenieriaSoftware
                 ole = Metodos.Conectar();
                 OleDbCommand cmd = new OleDbCommand();
                 cmd.Connection = ole;
-                cmd.CommandText = "SELECT * FROM usuarios WHERE Usuario='" + txtUsuario.Text + "'";
+                cmd.CommandText = "SELECT * FROM usuarios WHERE usuario='" + txtUsuario.Text + "'";
                 ole.Open();
                 OleDbDataReader reader = cmd.ExecuteReader();
 
@@ -99,7 +99,7 @@ namespace ProyectoIngenieriaSoftware
                         MessageBox.Show("El usuario no Existe");
                     }
 
-                
+                ole.Close();
 
             }
             catch (Exception ex)

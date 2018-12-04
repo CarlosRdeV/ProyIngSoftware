@@ -11,22 +11,20 @@ namespace ProyectoIngenieriaSoftware.Recursos
     public class Metodos
     {
         //Alumno
-        public static string idAlumno = "";
         public static string nombre = "";
         public static string edad = "";
         public static string direccion = "";
         public static string correo = "";
-        public static Boolean banderaCrearAlumno= false;
 
         //Profesor
-        public static string idProfesorUltimo = "";
+
         public static string IdProfesor = "";
         public static string NombreProfesor = "";
         public static string CorreoProfesor = "";
         public static string TipoIdProfesor = "";
 
         //Curso
-        public static string idCursoUltimo = "";
+
         public static string NombreCurso = "";
         public static string DuracionCurso = "";
         public static string HorarioCurso = "";
@@ -51,7 +49,8 @@ namespace ProyectoIngenieriaSoftware.Recursos
         public static string cal4 = "";
         public static string cal5 = "";
 
-        public static string cad_con = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\ProyectoIngenieriaSoftware\Recursos\escuela.mdb";
+
+        public static string cad_con = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\ProyectoIngenieriaSoftware\Resources\escuela.mdb";
         public static OleDbConnection con;
 
         //Metodo de Conexion
@@ -88,14 +87,11 @@ namespace ProyectoIngenieriaSoftware.Recursos
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Creado con exito");
                 con.Close();
-
-                idAlumno = Metodos.MostrarAlumnoUltimo();
-               
             }
             catch (System.Exception ex)
             {
-                //MessageBox.Show("Error:" + ex.Message);
-                MessageBox.Show("No se pudo crear el usuario \nVerifique los valores ingresados");
+                MessageBox.Show("Error:" + ex.Message);
+
             }
             
         }
@@ -121,47 +117,14 @@ namespace ProyectoIngenieriaSoftware.Recursos
                     edad = reader.GetValue(2).ToString();
                     correo = reader.GetValue(3).ToString();                  
                 }
-                                  
+                      
+             
                 con.Close();
-                banderaCrearAlumno = true;
-            }
-            catch (Exception ex)
-            {
-                //  MessageBox.Show("Error:" + ex.Message);
-                MessageBox.Show("Ingrese un valor valido para la busqueda");
-
-            }
-
-        }
-
-        public static  string MostrarAlumnoUltimo()
-        {
-            try
-            {
-                string ultimo = "";
-
-                OleDbConnection ole = new OleDbConnection();
-                ole = Metodos.Conectar();
-                OleDbCommand cmd = new OleDbCommand();
-
-                cmd.Connection = ole;
-                cmd.CommandText = "SELECT TOP 1 ID FROM Alumnos ORDER BY ID DESC";
-                con.Open();
-                
-                OleDbDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read()) {
-                    ultimo = reader.GetValue(0).ToString();                       
-                }
-                                  
-                con.Close();
-
-                return ultimo;
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message);
-                return "";
+
 
             }
 
@@ -186,8 +149,8 @@ namespace ProyectoIngenieriaSoftware.Recursos
             }
             catch (System.Exception ex)
             {
-                //MessageBox.Show("Error:" + ex.Message);
-                MessageBox.Show("Ingrese un valor valido");
+                MessageBox.Show("Error:" + ex.Message);
+
             }
 
         }
@@ -235,12 +198,10 @@ namespace ProyectoIngenieriaSoftware.Recursos
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Creado con exito");
                 con.Close();
-
-                idProfesorUltimo = Metodos.MostrarProfesorUltimo();
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("No se pudo crear el profesor \nVerifique los valores ingresados");
+                MessageBox.Show("Error:" + ex.Message);
 
             }
 
@@ -279,40 +240,6 @@ namespace ProyectoIngenieriaSoftware.Recursos
             {
                 MessageBox.Show("Error:" + ex.Message);
 
-
-            }
-
-        }
-
-        public static string MostrarProfesorUltimo()
-        {
-            try
-            {
-                string ultimo = "";
-
-                OleDbConnection ole = new OleDbConnection();
-                ole = Metodos.Conectar();
-                OleDbCommand cmd = new OleDbCommand();
-
-                cmd.Connection = ole;
-                cmd.CommandText = "SELECT TOP 1 ID FROM Profesores ORDER BY ID DESC";
-                con.Open();
-
-                OleDbDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    ultimo = reader.GetValue(0).ToString();
-                }
-
-                con.Close();
-
-                return ultimo;
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show("Error:" + ex.Message);
-                return "";
 
             }
 
@@ -386,12 +313,10 @@ namespace ProyectoIngenieriaSoftware.Recursos
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Creado con exito");
                 con.Close();
-
-                idCursoUltimo = Metodos.MostrarCursoUltimo();
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("No se pudo crear el curso \nVerifique los valores ingresados");
+                MessageBox.Show("Error:" + ex.Message);
 
             }
 
@@ -430,40 +355,6 @@ namespace ProyectoIngenieriaSoftware.Recursos
             {
                 MessageBox.Show("Error:" + ex.Message);
 
-
-            }
-
-        }
-
-        public static string MostrarCursoUltimo()
-        {
-            try
-            {
-                string ultimo = "";
-
-                OleDbConnection ole = new OleDbConnection();
-                ole = Metodos.Conectar();
-                OleDbCommand cmd = new OleDbCommand();
-
-                cmd.Connection = ole;
-                cmd.CommandText = "SELECT TOP 1 ID FROM Cursos ORDER BY ID DESC";
-                con.Open();
-
-                OleDbDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    ultimo = reader.GetValue(0).ToString();
-                }
-
-                con.Close();
-
-                return ultimo;
-            }
-            catch (System.Exception ex)
-            {
-                MessageBox.Show("Error:" + ex.Message);
-                return "";
 
             }
 
@@ -521,7 +412,7 @@ namespace ProyectoIngenieriaSoftware.Recursos
         }
 
 
-        //Califiaciones
+        //Calificaiones
         public static void CrearCalificacion (string idAlumno, string idCurso, string calificacion)
         {
             try
@@ -543,7 +434,7 @@ namespace ProyectoIngenieriaSoftware.Recursos
             }
             catch (System.Exception ex)
             {
-                MessageBox.Show("No se pudo crear la calificacion \nVerifique los valores ingresados");
+                MessageBox.Show("Error:" + ex.Message);
 
             }
 
@@ -666,7 +557,7 @@ namespace ProyectoIngenieriaSoftware.Recursos
                     //CALIFICACION = reader.GetValue(2).ToString();
                     cuantos++;
                 }
-               
+
                 con.Close();
 
                 return Convert.ToString(cuantos);
@@ -700,21 +591,24 @@ namespace ProyectoIngenieriaSoftware.Recursos
 
                 while (reader.Read())
                 {
-                   
-                    if(Convert.ToInt32(reader.GetValue(0).ToString()) > 0) {
+
+                    if (Convert.ToInt32(reader.GetValue(0).ToString()) > 0)
+                    {
                         cuantos++;
                         sumaCal = sumaCal + Convert.ToInt32(reader.GetValue(0).ToString());
                     }
-                    
+
                 }
                 con.Close();
-                if (cuantos > 0) {
+                if (cuantos > 0)
+                {
                     promedio = sumaCal / cuantos;
                 }
-                else {
+                else
+                {
                     promedio = 0;
                 }
-               
+
                 return Convert.ToString(promedio);
             }
             catch (System.Exception ex)
@@ -782,18 +676,18 @@ namespace ProyectoIngenieriaSoftware.Recursos
                             cal5 = reader.GetValue(1).ToString();
 
                             break;
-                    }                 
+                    }
 
                 }
                 con.Close();
-                
 
-                
+
+
             }
             catch (System.Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message);
-                
+
 
             }
 

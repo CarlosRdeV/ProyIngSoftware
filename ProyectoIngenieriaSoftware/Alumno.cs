@@ -20,25 +20,18 @@ namespace ProyectoIngenieriaSoftware
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
+           
             string seleccion= cmbCorreo.Items[cmbCorreo.SelectedIndex].ToString();
 
             string correo = txtCorreo.Text + seleccion;
             
             Metodos.CrearAlumno(txtNombre.Text,txtDireccion.Text,txtEdad.Text,correo);
 
-            if (Metodos.banderaCrearAlumno == true)
-            {
-                MessageBox.Show("Se ha creado el siguiente usuario: \nId: " + Metodos.idAlumno + "\nNombre: " + txtNombre.Text + " \nDireccion: " + txtDireccion.Text + " \nEdad: " + txtEdad.Text + " \nCorreo Electronico: " + correo);
-            }
-            
-
             txtNombre.Text = "";
             txtDireccion.Text = "";
             txtEdad.Text = "";
             txtCorreo.Text = "";
 
-            Metodos.idAlumno = "";
 
         }
 
@@ -66,10 +59,6 @@ namespace ProyectoIngenieriaSoftware
             lbDireccion.Text = Metodos.direccion;
             lbEdad.Text = Metodos.edad;
             lbCorreo.Text = Metodos.correo;
-            Metodos.nombre = "";
-            Metodos.direccion = "";
-            Metodos.edad = "";
-            Metodos.correo = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -165,11 +154,6 @@ namespace ProyectoIngenieriaSoftware
 
 
 
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

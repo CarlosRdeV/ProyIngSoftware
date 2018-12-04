@@ -28,164 +28,140 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(IngresoAdmin));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.btnCrearAlumno = new System.Windows.Forms.Button();
             this.btnCrearProfe = new System.Windows.Forms.Button();
             this.btnCrearCurso = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnCalificaciones = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.Inscripcion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 44);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(140, 41);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.Size = new System.Drawing.Size(358, 27);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Bievenido Administrador";
+            this.label1.Text = "BIENVENIDO ADMINISTRADOR";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 78);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Transparent;
+            this.label2.Location = new System.Drawing.Point(21, 109);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(195, 13);
+            this.label2.Size = new System.Drawing.Size(286, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Selecciona la opción que desea realizar";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(64, 104);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Alumno";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(189, 104);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Profesores";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(316, 104);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(39, 13);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Cursos";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(455, 104);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(48, 13);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "Usuarios";
-            // 
             // btnCrearAlumno
             // 
-            this.btnCrearAlumno.Location = new System.Drawing.Point(58, 143);
+            this.btnCrearAlumno.BackColor = System.Drawing.Color.Orange;
+            this.btnCrearAlumno.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearAlumno.ForeColor = System.Drawing.Color.White;
+            this.btnCrearAlumno.Location = new System.Drawing.Point(24, 144);
             this.btnCrearAlumno.Name = "btnCrearAlumno";
-            this.btnCrearAlumno.Size = new System.Drawing.Size(86, 23);
-            this.btnCrearAlumno.TabIndex = 6;
+            this.btnCrearAlumno.Size = new System.Drawing.Size(121, 40);
+            this.btnCrearAlumno.TabIndex = 0;
             this.btnCrearAlumno.Text = "Alumnos";
-            this.btnCrearAlumno.UseVisualStyleBackColor = true;
+            this.btnCrearAlumno.UseVisualStyleBackColor = false;
             this.btnCrearAlumno.Click += new System.EventHandler(this.btnCrearAlumno_Click);
             // 
             // btnCrearProfe
             // 
-            this.btnCrearProfe.Location = new System.Drawing.Point(181, 143);
+            this.btnCrearProfe.BackColor = System.Drawing.Color.Orange;
+            this.btnCrearProfe.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearProfe.ForeColor = System.Drawing.Color.White;
+            this.btnCrearProfe.Location = new System.Drawing.Point(181, 144);
             this.btnCrearProfe.Name = "btnCrearProfe";
-            this.btnCrearProfe.Size = new System.Drawing.Size(86, 23);
-            this.btnCrearProfe.TabIndex = 11;
+            this.btnCrearProfe.Size = new System.Drawing.Size(121, 40);
+            this.btnCrearProfe.TabIndex = 1;
             this.btnCrearProfe.Text = "Profesores";
-            this.btnCrearProfe.UseVisualStyleBackColor = true;
+            this.btnCrearProfe.UseVisualStyleBackColor = false;
             this.btnCrearProfe.Click += new System.EventHandler(this.btnCrearProfe_Click);
             // 
             // btnCrearCurso
             // 
-            this.btnCrearCurso.Location = new System.Drawing.Point(302, 143);
+            this.btnCrearCurso.BackColor = System.Drawing.Color.Orange;
+            this.btnCrearCurso.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearCurso.ForeColor = System.Drawing.Color.White;
+            this.btnCrearCurso.Location = new System.Drawing.Point(337, 144);
             this.btnCrearCurso.Name = "btnCrearCurso";
-            this.btnCrearCurso.Size = new System.Drawing.Size(86, 23);
-            this.btnCrearCurso.TabIndex = 16;
+            this.btnCrearCurso.Size = new System.Drawing.Size(121, 40);
+            this.btnCrearCurso.TabIndex = 2;
             this.btnCrearCurso.Text = "Cursos";
-            this.btnCrearCurso.UseVisualStyleBackColor = true;
+            this.btnCrearCurso.UseVisualStyleBackColor = false;
             this.btnCrearCurso.Click += new System.EventHandler(this.btnCrearCurso_Click);
             // 
             // btnReportes
             // 
-            this.btnReportes.Location = new System.Drawing.Point(302, 192);
+            this.btnReportes.BackColor = System.Drawing.Color.Orange;
+            this.btnReportes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReportes.ForeColor = System.Drawing.Color.White;
+            this.btnReportes.Location = new System.Drawing.Point(255, 237);
             this.btnReportes.Name = "btnReportes";
-            this.btnReportes.Size = new System.Drawing.Size(86, 23);
-            this.btnReportes.TabIndex = 21;
+            this.btnReportes.Size = new System.Drawing.Size(121, 40);
+            this.btnReportes.TabIndex = 4;
             this.btnReportes.Text = "Reportes";
-            this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.UseVisualStyleBackColor = false;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // btnCalificaciones
             // 
-            this.btnCalificaciones.Location = new System.Drawing.Point(441, 143);
+            this.btnCalificaciones.BackColor = System.Drawing.Color.Orange;
+            this.btnCalificaciones.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalificaciones.ForeColor = System.Drawing.Color.White;
+            this.btnCalificaciones.Location = new System.Drawing.Point(494, 144);
             this.btnCalificaciones.Name = "btnCalificaciones";
-            this.btnCalificaciones.Size = new System.Drawing.Size(86, 23);
-            this.btnCalificaciones.TabIndex = 22;
+            this.btnCalificaciones.Size = new System.Drawing.Size(121, 40);
+            this.btnCalificaciones.TabIndex = 3;
             this.btnCalificaciones.Text = "Calificaciones";
-            this.btnCalificaciones.UseVisualStyleBackColor = true;
+            this.btnCalificaciones.UseVisualStyleBackColor = false;
             this.btnCalificaciones.Click += new System.EventHandler(this.btnCalificaciones_Click);
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(244, 243);
+            this.btnSalir.BackColor = System.Drawing.Color.Blue;
+            this.btnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnSalir.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.ForeColor = System.Drawing.Color.Transparent;
+            this.btnSalir.Location = new System.Drawing.Point(255, 323);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(86, 23);
-            this.btnSalir.TabIndex = 26;
+            this.btnSalir.Size = new System.Drawing.Size(121, 40);
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.Text = "Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // Inscripcion
-            // 
-            this.Inscripcion.Location = new System.Drawing.Point(181, 192);
-            this.Inscripcion.Name = "Inscripcion";
-            this.Inscripcion.Size = new System.Drawing.Size(86, 23);
-            this.Inscripcion.TabIndex = 27;
-            this.Inscripcion.Text = "Inscripcion";
-            this.Inscripcion.UseVisualStyleBackColor = true;
-            this.Inscripcion.Click += new System.EventHandler(this.Inscripcion_Click);
             // 
             // IngresoAdmin
             // 
+            this.AcceptButton = this.btnCrearAlumno;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 317);
-            this.Controls.Add(this.Inscripcion);
+            this.BackColor = System.Drawing.Color.White;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.CancelButton = this.btnSalir;
+            this.ClientSize = new System.Drawing.Size(627, 414);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCalificaciones);
             this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.btnCrearCurso);
             this.Controls.Add(this.btnCrearProfe);
             this.Controls.Add(this.btnCrearAlumno);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "IngresoAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "IngresoAdmin";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -196,16 +172,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnCrearAlumno;
         private System.Windows.Forms.Button btnCrearProfe;
         private System.Windows.Forms.Button btnCrearCurso;
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnCalificaciones;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button Inscripcion;
     }
 }

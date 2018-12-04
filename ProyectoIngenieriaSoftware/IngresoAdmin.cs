@@ -60,14 +60,8 @@ namespace ProyectoIngenieriaSoftware
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            Reporte repor = new Reporte();
-            repor.Show();
-        }
-
-        private void Inscripcion_Click(object sender, EventArgs e)
-        {
-            Inscripcion ins = new Inscripcion();
-            ins.Show();
+            Reporte reporte = new Reporte();
+            reporte.Show();
         }
     }
 }
