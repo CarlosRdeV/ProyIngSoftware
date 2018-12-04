@@ -22,41 +22,88 @@ namespace ProyectoIngenieriaSoftware
         {
             cmbCorreo.SelectedIndex = 0;
             cmbTipo.SelectedIndex = 0;
+            txtUpdateNombre.Enabled = false;
+            txtUpdateTipo.Enabled = false;
+            txtUpdateCorreo.Enabled = false;
+            btnModificarUpdate.Enabled = false;
+
+            txtNombre.Text = "";
+            txtCorreo.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string tipo = cmbTipo.Items[cmbTipo.SelectedIndex].ToString();
+            if (txtNombre.Text != "" && txtCorreo.Text != "")
+            {
+                string tipo = cmbTipo.Items[cmbTipo.SelectedIndex].ToString();
 
-            string seleccion = cmbCorreo.Items[cmbCorreo.SelectedIndex].ToString();
+                string seleccion = cmbCorreo.Items[cmbCorreo.SelectedIndex].ToString();
 
-            string correo = txtCorreo.Text + seleccion;
+                string correo = txtCorreo.Text + seleccion;
 
-            Metodos.CrearProfesor(txtNombre.Text,correo, tipo);
+                Metodos.CrearProfesor(txtNombre.Text, correo, tipo);
 
-            txtNombre.Text = "";
-            txtCorreo.Text = "";
+                string id = Metodos.MostrarUltimoProfesor();
+
+                MessageBox.Show("Se ha creado el siguiente Profesor: \nId: " + id + "\nNombre: " + txtNombre.Text + "\nCorreo Electronico: " + correo + "\nTipo: " + tipo);
+
+                txtNombre.Text = "";
+                txtCorreo.Text = "";
+            }
+            else {
+                
+                MessageBox.Show("Rellena todos los campos");
+            }
+
             
+           
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //TRae los valores pero no los muestra en los label
+            
             Metodos.MostrarProfesor(txtIdMostrar.Text);
 
             lblNombre.Text = Metodos.NombreProfesor;
             lblCorreo.Text = Metodos.CorreoProfesor;
             lblTipo.Text = Metodos.TipoIdProfesor;
+
+            Metodos.NombreProfesor = "";
+            Metodos.CorreoProfesor = "";
+            Metodos.TipoIdProfesor = "";
         }
 
         private void btnBuscarUpdate_Click(object sender, EventArgs e)
         {
-            //TRae los valores pero no los muestra en los label
+            
             Metodos.MostrarProfesor(txtUpdateId.Text);
 
             txtUpdateNombre.Text = Metodos.NombreProfesor;
             txtUpdateCorreo.Text = Metodos.CorreoProfesor;
             txtUpdateTipo.Text = Metodos.TipoIdProfesor;
+
+            Metodos.NombreProfesor = "";
+            Metodos.CorreoProfesor = "";
+            Metodos.TipoIdProfesor = "";
+
+            if (txtUpdateNombre.Text != "")
+            {
+                txtUpdateNombre.Enabled = true;
+                txtUpdateCorreo.Enabled = true;
+                txtUpdateTipo.Enabled = true;
+                btnModificarUpdate.Enabled = true;
+
+            }
+            else
+            {
+
+                txtUpdateNombre.Enabled = false;
+                txtUpdateCorreo.Enabled = false;
+                txtUpdateTipo.Enabled = false;
+                btnModificarUpdate.Enabled = false;
+
+            }
         }
 
         private void btnModificarUpdate_Click(object sender, EventArgs e)
@@ -68,13 +115,10 @@ namespace ProyectoIngenieriaSoftware
             {
                 case DialogResult.Yes:
 
-  
                     Metodos.ActualizarProfesor(txtUpdateId.Text, txtUpdateNombre.Text, txtUpdateCorreo.Text, txtUpdateTipo.Text);
                     MessageBox.Show("El registro con id " + txtUpdateId.Text + " fue actualizado correctamente");
-
-
-
                     break;
+
                 case DialogResult.No:
                     break;
             }
@@ -96,6 +140,11 @@ namespace ProyectoIngenieriaSoftware
                 case DialogResult.No:
                     break;
             }
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

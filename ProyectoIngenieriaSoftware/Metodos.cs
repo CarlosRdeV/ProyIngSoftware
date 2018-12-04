@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ProyectoIngenieriaSoftware.Recursos
@@ -48,6 +44,18 @@ namespace ProyectoIngenieriaSoftware.Recursos
         public static string cal3 = "";
         public static string cal4 = "";
         public static string cal5 = "";
+
+        public static string num1Mayor = "";
+        public static string num2Mayor = "";
+        public static string num3Mayor = "";
+        public static string num4Mayor = "";
+        public static string num5Mayor = "";
+
+        public static string num1Menor = "";
+        public static string num2Menor = "";
+        public static string num3Menor = "";
+        public static string num4Menor = "";
+        public static string num5Menor = "";
 
 
         public static string cad_con = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\ProyectoIngenieriaSoftware\Resources\escuela.mdb";
@@ -693,7 +701,356 @@ namespace ProyectoIngenieriaSoftware.Recursos
 
         }
 
+        public static void CursosMasSolicitados()
+        {
+            try
+            {
+                int cuantos = 0;
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT TOP 5 IdCurso, COUNT(*) FROM CALIFICACIONES GROUP BY IdCurso ORDER BY COUNT(*) DESC";
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cuantos++;
+                  //  MessageBox.Show(reader.GetValue(0).ToString()+" "+ reader.GetValue(1).ToString()) ;
+                    switch (cuantos)
+                    {
+                        
+                        case 1:
+
+                            curso1 = reader.GetValue(0).ToString();
+                            num1Mayor = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 2:
+
+                            curso2 = reader.GetValue(0).ToString();
+                            num2Mayor = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 3:
+
+                            curso3 = reader.GetValue(0).ToString();
+                            num3Mayor = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 4:
+
+                            curso4 = reader.GetValue(0).ToString();
+                            num4Mayor = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 5:
+
+                            curso5 = reader.GetValue(0).ToString();
+                            num5Mayor = reader.GetValue(1).ToString();
+
+                            break;
+                    }
+
+                }
+                con.Close();
+
+
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+
+
+            }
+
+        }
+
+        public static void CursosMenosSolicitados()
+        {
+            try
+            {
+                int cuantos = 0;
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT TOP 5 IdCurso, COUNT(*) FROM CALIFICACIONES GROUP BY IdCurso ORDER BY COUNT(*) ASC";
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    cuantos++;
+                    //MessageBox.Show(reader.GetValue(0).ToString() + " " + reader.GetValue(1).ToString());
+                    switch (cuantos)
+                    {
+
+                        case 1:
+
+                            curso1 = reader.GetValue(0).ToString();
+                            num1Menor = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 2:
+
+                            curso2 = reader.GetValue(0).ToString();
+                            num2Menor = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 3:
+
+                            curso3 = reader.GetValue(0).ToString();
+                            num3Menor = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 4:
+
+                            curso4 = reader.GetValue(0).ToString();
+                            num4Menor = reader.GetValue(1).ToString();
+
+                            break;
+
+                        case 5:
+
+                            curso5 = reader.GetValue(0).ToString();
+                            num5Menor = reader.GetValue(1).ToString();
+
+                            break;
+                    }
+
+                }
+                con.Close();
+
+
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+
+
+            }
+
+        }
+
+        public static string MostrarNombreCurso(string id)
+        {
+            try
+            {
+                string nombre="";
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT NOMBRE from CURSOS WHERE Id=" + id;
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {                   
+                    nombre = reader.GetValue(0).ToString();                   
+                }
+              
+                con.Close();
+                return nombre;
+            }
+            catch (System.Exception ex)
+            {
+               // MessageBox.Show("Error:" + ex.Message);
+                return "" ;
+
+            }
+
+        }
+
+        public static string MostrarNombreAlumno(string id)
+        {
+            try
+            {
+                string nombre = "";
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT NOMBRE from ALUMNOS WHERE Id=" + id;
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    nombre = reader.GetValue(0).ToString();
+                }
+
+                con.Close();
+                return nombre;
+            }
+            catch (System.Exception ex)
+            {
+                // MessageBox.Show("Error:" + ex.Message);
+                return "";
+
+            }
+
+        }
+
+        public static string MostrarNombreProfesor(string id)
+        {
+            try
+            {
+                string nombre = "";
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT NOMBRE from PROFESORES WHERE Id=" + id;
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    nombre = reader.GetValue(0).ToString();
+                }
+
+                con.Close();
+                return nombre;
+            }
+            catch (System.Exception ex)
+            {
+                // MessageBox.Show("Error:" + ex.Message);
+                return "";
+
+            }
+
+        }
+
+        public static string MostrarUltimoAlumno()
+        {
+            try
+            {
+                string id ="";
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT TOP 1 ID FROM ALUMNOS ORDER BY ID DESC";
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {                 
+                 id = reader.GetValue(0).ToString();
+                }
+                con.Close();
+                return id;
+
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                return "";
+
+            }
+
+        }
+
+        public static string MostrarUltimoProfesor()
+        {
+            try
+            {
+                string id = "";
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT TOP 1 ID FROM Profesores ORDER BY ID DESC";
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    id = reader.GetValue(0).ToString();
+                }
+                con.Close();
+                return id;
+
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                return "";
+
+            }
+
+        }
+
+        public static string MostrarUltimoCurso()
+        {
+            try
+            {
+                string id = "";
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT TOP 1 ID FROM CURSOS ORDER BY ID DESC";
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    id = reader.GetValue(0).ToString();
+                }
+                con.Close();
+                return id;
+
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                return "";
+
+            }
+
+        }
     }
 
 
 }
+

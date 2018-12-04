@@ -123,7 +123,7 @@
             "@live.com"});
             this.cmbCorreo.Location = new System.Drawing.Point(440, 219);
             this.cmbCorreo.Name = "cmbCorreo";
-            this.cmbCorreo.Size = new System.Drawing.Size(121, 26);
+            this.cmbCorreo.Size = new System.Drawing.Size(146, 26);
             this.cmbCorreo.TabIndex = 12;
             // 
             // txtCorreo
@@ -166,7 +166,7 @@
             // 
             this.txtDireccion.Location = new System.Drawing.Point(134, 116);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(427, 26);
+            this.txtDireccion.Size = new System.Drawing.Size(452, 26);
             this.txtDireccion.TabIndex = 5;
             // 
             // label2
@@ -184,7 +184,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(134, 69);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(427, 26);
+            this.txtNombre.Size = new System.Drawing.Size(452, 26);
             this.txtNombre.TabIndex = 3;
             // 
             // label1

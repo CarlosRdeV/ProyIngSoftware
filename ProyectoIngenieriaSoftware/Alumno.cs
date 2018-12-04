@@ -20,17 +20,28 @@ namespace ProyectoIngenieriaSoftware
 
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            string seleccion= cmbCorreo.Items[cmbCorreo.SelectedIndex].ToString();
+            if (txtNombre.Text != "" && txtDireccion.Text != "" && txtEdad.Text != "" && txtCorreo.Text != "")
+            {
+                string seleccion = cmbCorreo.Items[cmbCorreo.SelectedIndex].ToString();
 
-            string correo = txtCorreo.Text + seleccion;
+                string correo = txtCorreo.Text + seleccion;
+
+                Metodos.CrearAlumno(txtNombre.Text, txtDireccion.Text, txtEdad.Text, correo);
+
+                string id = Metodos.MostrarUltimoAlumno();
+
+                MessageBox.Show("Se ha creado el siguiente Alumno: \nId: " + id + "\nNombre: " + txtNombre.Text + "\nDireccion: " +txtDireccion.Text+ "\nEdad: "+txtEdad.Text+ "\nCorreo Electronico: "+correo);
+
+                txtNombre.Text = "";
+                txtDireccion.Text = "";
+                txtEdad.Text = "";
+                txtCorreo.Text = "";
+
+            }
+            else {
+                MessageBox.Show("Rellena todos los campos");
+            }
             
-            Metodos.CrearAlumno(txtNombre.Text,txtDireccion.Text,txtEdad.Text,correo);
-
-            txtNombre.Text = "";
-            txtDireccion.Text = "";
-            txtEdad.Text = "";
-            txtCorreo.Text = "";
 
 
         }
@@ -42,28 +53,37 @@ namespace ProyectoIngenieriaSoftware
 
         private void Alumno_Load(object sender, EventArgs e)
         {
-            //cmbCorreo.Text = "Elije una opcion";
+            
             cmbCorreo.SelectedIndex = 0;
             txtUpdateNombre.Enabled = false;
             txtUpdateDireccion.Enabled = false;
             txtUpdateEdad.Enabled = false;
             txtUpdateCorreo.Enabled = false;
             btnModificarUpdate.Enabled = false;
+            txtNombre.Text = "";
+            txtDireccion.Text = "";
+            txtEdad.Text = "";
+            txtCorreo.Text = "";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //TRae los valores pero no los muestra en los label
+            
             Metodos.MostrarAlumno(txtIdMostrar.Text);
             lblNombre.Text = Metodos.nombre;
             lbDireccion.Text = Metodos.direccion;
             lbEdad.Text = Metodos.edad;
             lbCorreo.Text = Metodos.correo;
+
+            Metodos.nombre = "";
+            Metodos.direccion = "";
+            Metodos.edad = "";
+            Metodos.correo = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //TRae los valores pero no los muestra en los label
+            
             Metodos.MostrarAlumno(txtUpdateId.Text);
             txtUpdateNombre.Text = Metodos.nombre;
             txtUpdateDireccion.Text = Metodos.direccion;
@@ -113,8 +133,8 @@ namespace ProyectoIngenieriaSoftware
 
                     Metodos.ActualizarAlumno(txtUpdateId.Text, txtUpdateNombre.Text, txtUpdateDireccion.Text, txtUpdateEdad.Text, txtUpdateCorreo.Text);
                     MessageBox.Show("El registro con id "+txtUpdateId.Text+" fue actualizado correctamente");
-
                     break;
+
                 case DialogResult.No:
                     break;
             }

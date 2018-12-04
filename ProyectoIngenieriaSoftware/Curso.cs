@@ -20,14 +20,29 @@ namespace ProyectoIngenieriaSoftware
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (txtNombre.Text != "" && txtProfesor.Text != "")
+            {
+
+                string duracion = cmbDuracion.Items[cmbDuracion.SelectedIndex].ToString();
+                string horario = cmbHorario.Items[cmbHorario.SelectedIndex].ToString();
+
+                Metodos.CrearCurso(txtNombre.Text, duracion, horario, txtProfesor.Text);
+
+
+                string id = Metodos.MostrarUltimoCurso();
+
+                MessageBox.Show("Se ha creado el siguiente Curso: \nId: " + id + "\nNombre: " + txtNombre.Text + "\nDuracion: " + duracion + " semanas\nHorario: " + horario + "\nProfesor: " + txtProfesor.Text);
+
+                txtNombre.Text = "";
+                txtProfesor.Text = "";
+
+            }
+            else {
+                MessageBox.Show("Rellena todos los campos");
+            }
+
+
             
-            string duracion = cmbDuracion.Items[cmbDuracion.SelectedIndex].ToString();
-            string horario = cmbHorario.Items[cmbHorario.SelectedIndex].ToString();
-
-            Metodos.CrearCurso(txtNombre.Text, duracion, horario, txtProfesor.Text);
-
-            txtNombre.Text = "";
-            txtProfesor.Text = "";
 
             
         }
@@ -40,12 +55,17 @@ namespace ProyectoIngenieriaSoftware
             lblDuracion.Text = Metodos.DuracionCurso;
             lblHorario.Text = Metodos.HorarioCurso;
             lblProfesor.Text = Metodos.ProfesorCurso;
-            
+
+            Metodos.NombreCurso = "";
+            Metodos.DuracionCurso = "";
+            Metodos.HorarioCurso = "";
+            Metodos.ProfesorCurso = "";           
+
         }
 
         private void btnBuscarUpdate_Click(object sender, EventArgs e)
         {
-            Metodos.MostrarCurso(txtIdMostrar.Text);
+            Metodos.MostrarCurso(txtUpdateId.Text);
 
             txtUpdateNombre.Text = Metodos.NombreCurso;
             txtUpdateDuracion.Text = Metodos.DuracionCurso;
@@ -56,6 +76,24 @@ namespace ProyectoIngenieriaSoftware
             Metodos.DuracionCurso = "";
             Metodos.HorarioCurso= "";
             Metodos.ProfesorCurso= "";
+
+            if (txtUpdateNombre.Text != "")
+            {
+                txtUpdateNombre.Enabled = true;
+                txtUpdateDuracion.Enabled = true;
+                txtUpdateHorario.Enabled = true;
+                txtUpdateProfesor.Enabled = true;
+
+            }
+            else
+            {
+
+                txtUpdateNombre.Enabled = false;
+                txtUpdateDuracion.Enabled = false;
+                txtUpdateHorario.Enabled = false;
+                txtUpdateProfesor.Enabled = false;
+
+            }
         }
 
         private void btnModificarUpdate_Click(object sender, EventArgs e)
@@ -91,6 +129,19 @@ namespace ProyectoIngenieriaSoftware
                 case DialogResult.No:
                     break;
             }
+        }
+
+        private void Curso_Load(object sender, EventArgs e)
+        {
+            cmbDuracion.SelectedIndex = 0;
+            cmbHorario.SelectedIndex = 0;
+            txtUpdateNombre.Enabled = false;
+            txtUpdateDuracion.Enabled = false;
+            txtUpdateHorario.Enabled = false;
+            txtUpdateProfesor.Enabled = false;
+            txtNombre.Text = "";
+            txtProfesor.Text = "";
+               
         }
     }
 }
