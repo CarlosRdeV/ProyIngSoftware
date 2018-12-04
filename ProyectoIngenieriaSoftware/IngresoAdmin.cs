@@ -63,5 +63,11 @@ namespace ProyectoIngenieriaSoftware
             Reporte reporte = new Reporte();
             reporte.Show();
         }
+
+        private void btnInscripcion_Click(object sender, EventArgs e)
+        {
+            Inscripcion ins = new Inscripcion();
+            ins.Show();
+        }
     }
 }

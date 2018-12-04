@@ -18,14 +18,30 @@ namespace ProyectoIngenieriaSoftware
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnInscrip_Click(object sender, EventArgs e)
         {
-            Metodos.CrearCalificacion(txtIDalumnoInsc.Text, txtIDcursonsc.Text, "0");
+            if (txtIDalumnoInsc.Text != "" && txtIDcursonsc.Text != "")
+            {
+                Metodos.CrearCalificacion(txtIDalumnoInsc.Text, txtIDcursonsc.Text, "0");
+                string nombreAl=Metodos.MostrarNombreAlumno(txtIDalumnoInsc.Text);
+                string nombreCur = Metodos.MostrarNombreCurso(txtIDcursonsc.Text);
+
+                MessageBox.Show("Se ha creado el siguiente Curso: " + "\nID Alumno: " + txtIDalumnoInsc.Text + "\nNombre del Alumno: "+nombreAl+"\nID Curso: "+txtIDcursonsc.Text+"\nNombre del Curso: "+nombreCur);
+
+                txtIDalumnoInsc.Text = "";
+                txtIDcursonsc.Text = "";
+            }
+            else
+            {
+                MessageBox.Show("Rellena todos los campos");
+            }
         }
 
-        private void btnClose_Click(object sender, EventArgs e)
+        private void Inscripcion_Load(object sender, EventArgs e)
         {
-            Close();
+            txtIDalumnoInsc.Text = "";
+            txtIDcursonsc.Text = "";
+                
         }
     }
 }

@@ -71,3 +71,4 @@ C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenie
 C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.exe
 C:\Users\Oldspice\Downloads\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.pdb
 E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Reporte.resources
+E:\ProyectoIngenieriaSoftware\obj\Debug\ProyectoIngenieriaSoftware.Inscripcion.resources

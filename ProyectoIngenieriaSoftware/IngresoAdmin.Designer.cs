@@ -37,6 +37,7 @@
             this.btnReportes = new System.Windows.Forms.Button();
             this.btnCalificaciones = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnInscripcion = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -107,7 +108,7 @@
             this.btnReportes.BackColor = System.Drawing.Color.Orange;
             this.btnReportes.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReportes.ForeColor = System.Drawing.Color.White;
-            this.btnReportes.Location = new System.Drawing.Point(255, 237);
+            this.btnReportes.Location = new System.Drawing.Point(388, 237);
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(121, 40);
             this.btnReportes.TabIndex = 4;
@@ -142,6 +143,19 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // btnInscripcion
+            // 
+            this.btnInscripcion.BackColor = System.Drawing.Color.Orange;
+            this.btnInscripcion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInscripcion.ForeColor = System.Drawing.Color.White;
+            this.btnInscripcion.Location = new System.Drawing.Point(145, 237);
+            this.btnInscripcion.Name = "btnInscripcion";
+            this.btnInscripcion.Size = new System.Drawing.Size(121, 40);
+            this.btnInscripcion.TabIndex = 6;
+            this.btnInscripcion.Text = "Inscripciones";
+            this.btnInscripcion.UseVisualStyleBackColor = false;
+            this.btnInscripcion.Click += new System.EventHandler(this.btnInscripcion_Click);
+            // 
             // IngresoAdmin
             // 
             this.AcceptButton = this.btnCrearAlumno;
@@ -151,6 +165,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(627, 414);
+            this.Controls.Add(this.btnInscripcion);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCalificaciones);
             this.Controls.Add(this.btnReportes);
@@ -178,5 +193,6 @@
         private System.Windows.Forms.Button btnReportes;
         private System.Windows.Forms.Button btnCalificaciones;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnInscripcion;
     }
 }
