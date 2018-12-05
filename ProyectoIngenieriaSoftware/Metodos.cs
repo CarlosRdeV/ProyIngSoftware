@@ -316,7 +316,7 @@ namespace ProyectoIngenieriaSoftware.Recursos
 
                 cmd.Connection = ole;
 
-                cmd.CommandText = "INSERT INTO CURSOS (NOMBRE,DURACION,HORARIO,PROFESOR) VALUES ('" + nombre + "','" + duracion + "','"+horario+"',"+profesor+")";
+                cmd.CommandText = "INSERT INTO CURSOS (NOMBRE,DURACION,HORARIO,PROFESOR,ESTADO) VALUES ('" + nombre + "','" + duracion + "','"+horario+"',"+profesor+",'Pendiente')";
                 con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Creado con exito");
@@ -419,6 +419,32 @@ namespace ProyectoIngenieriaSoftware.Recursos
 
         }
 
+        public static void ActualizarEstadoCurso(string id, string estado)
+        {
+            try
+            {
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                // "UPDATE Records SET FirstName = @firstname, LastName = @lastname, Age = @age, Address = @address, Course = @course WHERE FirstName = @firstname";
+                //cmd.CommandText = "UPDATE ALUMNOS SET NOMBRE = (NOMBRE,DIRECCION,EDAD,CORREOELECTRONICO) VALUES ('" + nombre + "','" + direccion + "'," + edad + ",'" + correo + "')";
+                cmd.CommandText = "UPDATE CURSOS SET ESTADO = '" + estado + "' WHERE Id = " + id;
+                con.Open();
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Se Actualizo el estado del curso");
+                con.Close();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+
+            }
+
+        }
+
 
         //Calificaiones
         public static void CrearCalificacion (string idAlumno, string idCurso, string calificacion)
@@ -432,7 +458,7 @@ namespace ProyectoIngenieriaSoftware.Recursos
 
                 cmd.Connection = ole;
 
-                //              cmd.CommandText = "INSERT INTO CURSOS (NOMBRE,DURACION,HORARIO,PROFESOR) VALUES ('" + nombre + "','" + duracion + "','" + horario + "'," + profesor + ")";
+                //cmd.CommandText = "INSERT INTO CURSOS (NOMBRE,DURACION,HORARIO,PROFESOR) VALUES ('" + nombre + "','" + duracion + "','" + horario + "'," + profesor + ")";
 
                 cmd.CommandText = "INSERT INTO CALIFICACIONES (IDALUMNO, IDCURSO, CALIFICACION) VALUES (" + idAlumno + "," + idCurso + "," + calificacion + ")";
                 con.Open();
@@ -1049,6 +1075,118 @@ namespace ProyectoIngenieriaSoftware.Recursos
             }
 
         }
+
+        public static string MostrarUltimoCalificacion()
+        {
+            try
+            {
+                string id = "";
+
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT TOP 1 ID FROM CALIFICACIONES ORDER BY ID DESC";
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    id = reader.GetValue(0).ToString();
+                }
+                con.Close();
+                return id;
+
+
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                return "";
+
+            }
+
+        }
+
+        public static int MaxProfesor(string id)
+        {
+            try
+            {
+                string numero = "";
+                int cuantos = 0;
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT Profesor FROM cursos";
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    //To do
+                    //Crear nuevas variables, solo para profesor
+                    //Cambiar
+                    numero = reader.GetValue(0).ToString();
+                    if (numero == id) {
+                        cuantos++;
+                    }
+                }
+                con.Close();
+                return cuantos;
+            }
+
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                return 0;
+
+            }
+        }
+
+        public static int MaxAlumno(string id)
+        {
+            try
+            {
+                string numero = "";
+                int cuantos = 0;
+                OleDbConnection ole = new OleDbConnection();
+                ole = Metodos.Conectar();
+                OleDbCommand cmd = new OleDbCommand();
+
+                cmd.Connection = ole;
+                cmd.CommandText = "SELECT IDALUMNO FROM calificaciones";
+                con.Open();
+
+                OleDbDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    //To do
+                    //Crear nuevas variables, solo para profesor
+                    //Cambiar
+                    numero = reader.GetValue(0).ToString();
+                    if (numero == id)
+                    {
+                        cuantos++;
+                    }
+                }
+                con.Close();
+                return cuantos;
+            }
+
+            catch (System.Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+                return 0;
+
+            }
+        }
+
     }
 
 

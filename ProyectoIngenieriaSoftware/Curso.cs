@@ -26,15 +26,25 @@ namespace ProyectoIngenieriaSoftware
                 string duracion = cmbDuracion.Items[cmbDuracion.SelectedIndex].ToString();
                 string horario = cmbHorario.Items[cmbHorario.SelectedIndex].ToString();
 
-                Metodos.CrearCurso(txtNombre.Text, duracion, horario, txtProfesor.Text);
+                int cuantos = Metodos.MaxProfesor(txtProfesor.Text);
+
+                if (cuantos == 0)
+                {
+                    Metodos.CrearCurso(txtNombre.Text, duracion, horario, txtProfesor.Text);
 
 
-                string id = Metodos.MostrarUltimoCurso();
+                    string id = Metodos.MostrarUltimoCurso();
 
-                MessageBox.Show("Se ha creado el siguiente Curso: \nId: " + id + "\nNombre: " + txtNombre.Text + "\nDuracion: " + duracion + " semanas\nHorario: " + horario + "\nProfesor: " + txtProfesor.Text);
+                    MessageBox.Show("Se ha creado el siguiente Curso: \nId: " + id + "\nNombre: " + txtNombre.Text + "\nDuracion: " + duracion + " semanas\nHorario: " + horario + "\nProfesor: " + txtProfesor.Text);
 
-                txtNombre.Text = "";
-                txtProfesor.Text = "";
+                    txtNombre.Text = "";
+                    txtProfesor.Text = "";
+
+                }
+                else {
+                    MessageBox.Show("Este profesor ya se encuentra inscrito en un curso");
+                }
+                
 
             }
             else {

@@ -91,15 +91,17 @@ namespace ProyectoIngenieriaSoftware
                     }
                     else if (txtUsuario.Text == var && txtContrasena.Text == var2 && "U" == var3)
                     {
-                        /*
+                        
                         IngresoUsuario ingresoUsuario = new IngresoUsuario();
-                        ingresoUsuario.Show();*/
+                        ingresoUsuario.Show();
+                        Hide();
                     }
                     else {
                         MessageBox.Show("El usuario no Existe");
                     }
 
                 ole.Close();
+
 
             }
             catch (Exception ex)

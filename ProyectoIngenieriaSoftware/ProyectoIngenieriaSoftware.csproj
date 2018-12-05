@@ -52,17 +52,41 @@
     <Compile Include="Alumno.Designer.cs">
       <DependentUpon>Alumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlumnoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlumnoUsuario.Designer.cs">
+      <DependentUpon>AlumnoUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Calificacion.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Calificacion.Designer.cs">
       <DependentUpon>Calificacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="CalificacionUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalificacionUsuario.Designer.cs">
+      <DependentUpon>CalificacionUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Curso.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Curso.Designer.cs">
       <DependentUpon>Curso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CursoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CursoUsuario.Designer.cs">
+      <DependentUpon>CursoUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IngresoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IngresoUsuario.Designer.cs">
+      <DependentUpon>IngresoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -89,6 +113,12 @@
     <Compile Include="Profesor.Designer.cs">
       <DependentUpon>Profesor.cs</DependentUpon>
     </Compile>
+    <Compile Include="ProfesorUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProfesorUsuario.Designer.cs">
+      <DependentUpon>ProfesorUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reporte.cs">
@@ -100,11 +130,23 @@
     <EmbeddedResource Include="Alumno.resx">
       <DependentUpon>Alumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlumnoUsuario.resx">
+      <DependentUpon>AlumnoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Calificacion.resx">
       <DependentUpon>Calificacion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalificacionUsuario.resx">
+      <DependentUpon>CalificacionUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Curso.resx">
       <DependentUpon>Curso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CursoUsuario.resx">
+      <DependentUpon>CursoUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IngresoUsuario.resx">
+      <DependentUpon>IngresoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -117,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Profesor.resx">
       <DependentUpon>Profesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProfesorUsuario.resx">
+      <DependentUpon>ProfesorUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

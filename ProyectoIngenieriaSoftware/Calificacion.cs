@@ -18,18 +18,7 @@ namespace ProyectoIngenieriaSoftware
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string calificacion = cmbCalificacion.Items[cmbCalificacion.SelectedIndex].ToString();
-
-            
-
-            Metodos.CrearCalificacion(txtIDnombre.Text,txtIDcurso.Text,calificacion);
-
-            txtIDnombre.Text = "";
-            txtIDcurso.Text = "";
-            
-        }
+        
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -48,7 +37,9 @@ namespace ProyectoIngenieriaSoftware
             switch (dr)
             {
                 case DialogResult.Yes:
-                    Metodos.ActualizarCalificacion(txtUpdateId.Text,txtUpdateIDalumno.Text,txtUpdateIDcurso.Text,txtUpdateCalificacion.Text);
+
+                    string nuevaCal = cmbUpdateCal.Items[cmbUpdateCal.SelectedIndex].ToString();
+                    Metodos.ActualizarCalificacion(txtUpdateId.Text,txtUpdateIDalumno.Text,txtUpdateIDcurso.Text,nuevaCal);
                     MessageBox.Show("El registro con id " + txtUpdateId.Text + " fue actualizado correctamente");
 
                     break;
@@ -59,10 +50,12 @@ namespace ProyectoIngenieriaSoftware
 
         private void btnBuscarUpdate_Click(object sender, EventArgs e)
         {
+            
             Metodos.MostrarCalificacion(txtUpdateId.Text);
             txtUpdateIDalumno.Text = Metodos.IDALUMNO;
             txtUpdateIDcurso.Text = Metodos.IDCURSO;
-            txtUpdateCalificacion.Text = Metodos.CALIFICACION;
+            string cal = Metodos.CALIFICACION;
+            lblCalAsig.Text = "Calificación asignada: " + cal;
 
             Metodos.IDALUMNO = "";
             Metodos.IDCURSO = "";
@@ -90,6 +83,11 @@ namespace ProyectoIngenieriaSoftware
         private void label10_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Calificacion_Load(object sender, EventArgs e)
+        {
+            cmbUpdateCal.SelectedIndex = 0;
         }
     }
 }

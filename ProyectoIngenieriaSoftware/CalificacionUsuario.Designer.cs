@@ -1,6 +1,6 @@
 ﻿namespace ProyectoIngenieriaSoftware
 {
-    partial class Calificacion
+    partial class CalificacionUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -40,6 +40,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.lblCalAsig = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbUpdateCal = new System.Windows.Forms.ComboBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtUpdateIDcurso = new System.Windows.Forms.TextBox();
             this.txtUpdateIDalumno = new System.Windows.Forms.TextBox();
             this.btnModificarUpdate = new System.Windows.Forms.Button();
@@ -48,31 +52,21 @@
             this.txtUpdateId = new System.Windows.Forms.TextBox();
             this.label18 = new System.Windows.Forms.Label();
             this.btnBuscarUpdate = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtDeleteId = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.cmbUpdateCal = new System.Windows.Forms.ComboBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.lblCalAsig = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(-6, 1);
+            this.tabControl1.Location = new System.Drawing.Point(-7, -4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(416, 341);
-            this.tabControl1.TabIndex = 2;
+            this.tabControl1.TabIndex = 3;
             // 
             // tabPage2
             // 
@@ -206,6 +200,55 @@
             this.tabPage3.Text = "Modificar";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
+            // lblCalAsig
+            // 
+            this.lblCalAsig.AutoSize = true;
+            this.lblCalAsig.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblCalAsig.Location = new System.Drawing.Point(49, 185);
+            this.lblCalAsig.Name = "lblCalAsig";
+            this.lblCalAsig.Size = new System.Drawing.Size(163, 18);
+            this.lblCalAsig.TabIndex = 42;
+            this.lblCalAsig.Text = "Calificación asignada:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(239, 233);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 18);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Redondeado";
+            // 
+            // cmbUpdateCal
+            // 
+            this.cmbUpdateCal.FormattingEnabled = true;
+            this.cmbUpdateCal.Items.AddRange(new object[] {
+            "10",
+            "9",
+            "8",
+            "7",
+            "6",
+            "5",
+            "4",
+            "3",
+            "2",
+            "1"});
+            this.cmbUpdateCal.Location = new System.Drawing.Point(149, 225);
+            this.cmbUpdateCal.Name = "cmbUpdateCal";
+            this.cmbUpdateCal.Size = new System.Drawing.Size(84, 26);
+            this.cmbUpdateCal.TabIndex = 40;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(49, 228);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(90, 18);
+            this.label11.TabIndex = 39;
+            this.label11.Text = "Calificacion";
+            // 
             // txtUpdateIDcurso
             // 
             this.txtUpdateIDcurso.Location = new System.Drawing.Point(149, 139);
@@ -282,115 +325,20 @@
             this.btnBuscarUpdate.UseVisualStyleBackColor = false;
             this.btnBuscarUpdate.Click += new System.EventHandler(this.btnBuscarUpdate_Click);
             // 
-            // tabPage4
-            // 
-            this.tabPage4.BackgroundImage = global::ProyectoIngenieriaSoftware.Properties.Resources.fondo_azul_naranja_23_2147633368;
-            this.tabPage4.Controls.Add(this.btnDelete);
-            this.tabPage4.Controls.Add(this.label10);
-            this.tabPage4.Controls.Add(this.txtDeleteId);
-            this.tabPage4.Location = new System.Drawing.Point(4, 27);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(408, 310);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Borrar";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Blue;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(150, 155);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 30);
-            this.btnDelete.TabIndex = 32;
-            this.btnDelete.Text = "Borrar";
-            this.btnDelete.UseVisualStyleBackColor = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(33, 52);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(309, 18);
-            this.label10.TabIndex = 29;
-            this.label10.Text = "Ingrese el Id de la calificacion a ser borrada";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // txtDeleteId
-            // 
-            this.txtDeleteId.Location = new System.Drawing.Point(36, 88);
-            this.txtDeleteId.Name = "txtDeleteId";
-            this.txtDeleteId.Size = new System.Drawing.Size(75, 26);
-            this.txtDeleteId.TabIndex = 31;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(239, 233);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 18);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Redondeado";
-            // 
-            // cmbUpdateCal
-            // 
-            this.cmbUpdateCal.FormattingEnabled = true;
-            this.cmbUpdateCal.Items.AddRange(new object[] {
-            "10",
-            "9",
-            "8",
-            "7",
-            "6",
-            "5",
-            "4",
-            "3",
-            "2",
-            "1"});
-            this.cmbUpdateCal.Location = new System.Drawing.Point(149, 225);
-            this.cmbUpdateCal.Name = "cmbUpdateCal";
-            this.cmbUpdateCal.Size = new System.Drawing.Size(84, 26);
-            this.cmbUpdateCal.TabIndex = 40;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(49, 228);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(90, 18);
-            this.label11.TabIndex = 39;
-            this.label11.Text = "Calificacion";
-            // 
-            // lblCalAsig
-            // 
-            this.lblCalAsig.AutoSize = true;
-            this.lblCalAsig.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblCalAsig.Location = new System.Drawing.Point(49, 185);
-            this.lblCalAsig.Name = "lblCalAsig";
-            this.lblCalAsig.Size = new System.Drawing.Size(163, 18);
-            this.lblCalAsig.TabIndex = 42;
-            this.lblCalAsig.Text = "Calificación asignada:";
-            // 
-            // Calificacion
+            // CalificacionUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 333);
             this.Controls.Add(this.tabControl1);
-            this.Name = "Calificacion";
-            this.Text = "Calificacion";
-            this.Load += new System.EventHandler(this.Calificacion_Load);
+            this.Name = "CalificacionUsuario";
+            this.Text = "CalificacionUsuario";
+            this.Load += new System.EventHandler(this.CalificacionUsuario_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -409,6 +357,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.Label lblCalAsig;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbUpdateCal;
+        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox txtUpdateIDcurso;
         private System.Windows.Forms.TextBox txtUpdateIDalumno;
         private System.Windows.Forms.Button btnModificarUpdate;
@@ -417,13 +369,5 @@
         private System.Windows.Forms.TextBox txtUpdateId;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button btnBuscarUpdate;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Button btnDelete;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtDeleteId;
-        private System.Windows.Forms.Label lblCalAsig;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox cmbUpdateCal;
-        private System.Windows.Forms.Label label11;
     }
 }
