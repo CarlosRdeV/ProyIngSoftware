@@ -39,6 +39,8 @@
             this.chkBMostrar = new System.Windows.Forms.CheckBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.cmbUnidad = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // contextMenuStrip1
@@ -144,6 +146,36 @@
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
+            // cmbUnidad
+            // 
+            this.cmbUnidad.FormattingEnabled = true;
+            this.cmbUnidad.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I"});
+            this.cmbUnidad.Location = new System.Drawing.Point(97, 39);
+            this.cmbUnidad.Name = "cmbUnidad";
+            this.cmbUnidad.Size = new System.Drawing.Size(63, 21);
+            this.cmbUnidad.TabIndex = 23;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(12, 40);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(74, 22);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Unidad:";
+            // 
             // Inicio
             // 
             this.AcceptButton = this.btnIngresar;
@@ -153,6 +185,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.CancelButton = this.btnSalir;
             this.ClientSize = new System.Drawing.Size(622, 327);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cmbUnidad);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.chkBMostrar);
@@ -184,6 +218,8 @@
         private System.Windows.Forms.CheckBox chkBMostrar;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.ComboBox cmbUnidad;
+        private System.Windows.Forms.Label label4;
     }
 }
 

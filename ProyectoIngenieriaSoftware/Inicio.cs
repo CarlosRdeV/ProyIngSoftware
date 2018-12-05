@@ -28,6 +28,7 @@ namespace ProyectoIngenieriaSoftware
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            cmbUnidad.SelectedIndex = 0;
             //Inicializacion del check button para mostrar la contrasena oculta
             string text = txtContrasena.Text;
             if (chkBMostrar.Checked)
@@ -62,7 +63,8 @@ namespace ProyectoIngenieriaSoftware
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Metodos.unidad = cmbUnidad.Items[cmbUnidad.SelectedIndex].ToString();
+            
             //Metodo de Conexion a la base de datos
             try {
 

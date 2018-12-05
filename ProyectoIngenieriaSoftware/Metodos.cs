@@ -57,13 +57,17 @@ namespace ProyectoIngenieriaSoftware.Recursos
         public static string num4Menor = "";
         public static string num5Menor = "";
 
-
-        public static string cad_con = @"Provider=Microsoft.Jet.OLEDB.4.0;Data Source=E:\ProyectoIngenieriaSoftware\Resources\escuela.mdb";
+        //Unidad
+        public static string unidad ;
+        
+         
         public static OleDbConnection con;
 
         //Metodo de Conexion
         public static OleDbConnection Conectar()
         {
+             string cad_con = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + unidad + ":/ProyectoIngenieriaSoftware/Resources/escuela.mdb";
+        
             try
             {
                 con = new OleDbConnection(cad_con);
